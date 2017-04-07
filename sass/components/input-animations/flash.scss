@@ -1,0 +1,53 @@
+.input--flash {
+	.input__field {
+		width: 100%;
+		background: $shade-200;
+		box-shadow: 0px 0px 0px 0.2rem transparent;
+		color: $spring-green;
+		-webkit-transition: box-shadow 0.3s;
+		transition: box-shadow 0.3s;
+	}
+	.input__label {
+		padding: 0;
+		width: 100%;
+		text-align: left;
+		&::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			z-index: -1;
+			width: 100%;
+			height: 4rem;
+			box-shadow: 0px 0px 0px 0px;
+			color: $spring-green-opac;
+		}
+	}
+	.input__field:focus {
+		box-shadow: 0px 0px 0px 2px $spring-green;
+		+ .input__label {
+			pointer-events: none;
+			&::after {
+				-webkit-animation: anim-shadow 0.3s forwards;
+				animation: anim-shadow 0.3s forwards;
+			}
+		}
+	}
+	.input__label-content {
+		padding: 0.75rem 0.15rem;
+	}
+}
+
+@-webkit-keyframes anim-shadow {
+	to {
+		box-shadow: 0px 0px 100px 50px;
+		opacity: 0;
+	}
+}
+
+
+@keyframes anim-shadow {
+	to {
+		box-shadow: 0px 0px 100px 50px;
+		opacity: 0;
+	}
+}

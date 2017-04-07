@@ -1,0 +1,5 @@
+.navbar-wrapper {
+	@media (max-width: $break-mobile) {
+		display: none;
+	}
+}

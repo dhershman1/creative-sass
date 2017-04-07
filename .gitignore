@@ -1,0 +1,8 @@
+*.log
+node_modules/
+Thumbs.db
+dist/
+server/cssmanifest.json
+server/jsmanifest.json
+tap.json
+tap.xml
