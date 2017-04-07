@@ -1,0 +1,66 @@
+<div class="col-12">
+	<div class="card">
+		<h3 class="card-header">Modal Components</h3>
+		<div class="card-block">
+			<p class="card-text">
+				Modals consist of html placed on the page with a <span class="highlight">md-overlay</span> class on a div element
+				This produces both the modal and the screen overlay for the page. Modal must have an id attribute with the modal name
+			</p>
+			<p class="card-text">Classes</p>
+			<ul>
+				<li>
+						<span class="highlight">md-modal</span> - Says a div will be used as a modal
+				</li>
+				<li>
+						<span class="highlight">md-{ANIMATION}</span> - Determine the Modal animation
+				</li>
+				<li>
+						<span class="highlight">md-content</span> - Sets the content wrapper use an h3 tag in this wrapper for a header
+				</li>
+				<li>
+						<span class="highlight">md-close</span> - Closes the modal
+				</li>
+				<li>
+						<span class="highlight">md-overlay</span> - Will open an overlay behind the modal
+				</li>
+				<li>
+						<span class="highlight">md-trigger</span> - Will fire the modal when clicked set data-modal attribute in the same element with the modal name
+				</li>
+			</ul>
+			<pre class="line-numbers"><code class="language-html">
+				&lt;div class=&quot;md-modal md-fade-slide&quot; id=&quot;modal-test&quot;&gt;
+				 &lt;div class=&quot;md-content&quot;&gt;
+				  &lt;h3&gt;Test Modal&lt;/h3&gt;
+					 &lt;p&gt;Modal Content&lt;/p&gt;
+					 &lt;button class=&quot;btn btn-rswipe&quot;&gt;Modal Button&lt;/button&gt;
+					 &lt;button class=&quot;md-close btn btn-rswipe&quot;&gt;Close&lt;/button&gt;
+				 &lt;/div&gt;
+				&lt;/div&gt;
+				&lt;button class=&quot;md-trigger&quot; data-modal=&quot;modal-test&quot;&gt;Modal Trigger&lt;/button&gt;
+				&lt;div class=&quot;md-overlay&quot;&gt;&lt;/div&gt;
+			</code></pre>
+		</div>
+	</div>
+</div>
+<div class="md-modal md-fade-slide" id="modal-test">
+	<div class="md-content">
+		<h3>Test Modal</h3>
+		<div class="md-body">
+			<p>Modal Content</p>
+			<button class="btn btn-rswipe">Modal Button</button>
+			<button class="md-close btn btn-rswipe">Close</button>
+		</div>
+	</div>
+</div>
+<div class="md-overlay"></div>
+<div class="card-deck">
+	<div class="card">
+		<h3 class="card-header">Fade Slide Animation</h3>
+		<div class="card-block text-center">
+			<p class="card-text">Slides modal in to page from the left</p>
+			<button class="btn btn-dswipe md-trigger" data-modal="modal-test">Modal Trigger</button>
+			<p class="card-text">Uses class <span class="highlight">btn-corners</span></p>
+		</div>
+	</div>
+</div>
+<script src="/dist/js/modalHandler.js"></script>
