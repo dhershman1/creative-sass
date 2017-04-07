@@ -43,19 +43,22 @@
 			transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
 		}
 	}
-	.input__field:focus, .input--filled .input__field {
+	.input__field:focus,
+	&.input--filled .input__field {
 		cursor: text;
 		opacity: 1;
 		-webkit-transition: opacity 0s 0.4s;
 		transition: opacity 0s 0.4s;
 	}
-	.input__field:focus + .input__label::before, .input--filled .input__label::before {
+	.input__field:focus + .input__label::before,
+	&.input--filled .input__label::before {
 		-webkit-transition-delay: 0.05s;
 		transition-delay: 0.05s;
 		-webkit-transform: translate3d(0, -3.3rem, 0);
 		transform: translate3d(0, -3.3rem, 0);
 	}
-	.input__field:focus + .input__label .input__label-content, .input--filled .input__label-content {
+	.input__field:focus + .input__label .input__label-content,
+	&.input--filled .input__label-content {
 		color: $shade-200;
 		-webkit-transform: translate3d(0, -3.3rem, 0) scale3d(0.81, 0.81, 1);
 		transform: translate3d(0, -3.3rem, 0) scale3d(0.81, 0.81, 1);

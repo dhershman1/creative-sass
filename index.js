@@ -1,6 +1,8 @@
 const hapi = require('hapi');
 const inert = require('inert');
+const vision = require('vision');
 const path = require('path');
+const handlebars = require('handlebars');
 
 const server = new hapi.Server();
 
@@ -8,10 +10,20 @@ server.connection({
 	port: process.env.NODE_PORT || 5000
 });
 
-server.register(inert, err => {
+server.register([inert, vision], err => {
 	if (err) {
 		throw err;
 	}
+
+	server.views({
+		engines: {
+			html: handlebars
+		},
+		relativeTo: __dirname,
+		path: 'html',
+		helpersPath: path.join('html', 'helpers'),
+		layout: path.join('layout', 'main')
+	});
 
 	server.route([{
 		method: 'GET',
@@ -24,8 +36,14 @@ server.register(inert, err => {
 	}, {
 		method: 'GET',
 		path: '/',
-		handler: {
-			file: 'main.html'
+		handler: (request, reply) => {
+			return reply.view('home', {pageName: 'home'});
+		}
+	}, {
+		method: 'GET',
+		path: '/{path*}',
+		handler: (request, reply) => {
+			return reply.view(request.params.path, {pageName: request.params.path});
 		}
 	}]);
 

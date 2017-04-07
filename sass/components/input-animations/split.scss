@@ -3,6 +3,7 @@
 	margin-bottom: 3em;
 	text-align: center;
 	.input__field {
+		font-size: 1.55rem;
 		width: 100%;
 		background: transparent;
 		color: #9196A1;
@@ -35,20 +36,24 @@
 			border-left: none;
 		}
 	}
-	.input__field:focus, .input--filled .input__field {
+	.input__field:focus,
+	&.input--filled .input__field {
 		opacity: 1;
 		-webkit-transition-delay: 0.3s;
 		transition-delay: 0.3s;
 	}
-	.input__field:focus + .input__label::before, .input--filled .input__label::before {
+	.input__field:focus + .input__label::before,
+	&.input--filled .input__label::before {
 		-webkit-transform: translate3d(-10%, 0, 0);
 		transform: translate3d(-10%, 0, 0);
 	}
-	.input__field:focus + .input__label::after, .input--filled .input__label::after {
+	.input__field:focus + .input__label::after,
+	&.input--filled .input__label::after {
 		-webkit-transform: translate3d(10%, 0, 0);
 		transform: translate3d(10%, 0, 0);
 	}
-	.input__field:focus + .input__label .input__label-content, .input--filled .input__label-content {
+	.input__field:focus + .input__label .input__label-content,
+	&.input--filled .input__label-content {
 		-webkit-animation: anim-2 0.3s forwards;
 		animation: anim-2 0.3s forwards;
 	}

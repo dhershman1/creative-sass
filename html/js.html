@@ -1,0 +1,43 @@
+<div class="card">
+	<h3 class="card-header">How does it work?</h3>
+	<div class="card-block">
+		<p class="card-text">All it takes is adding a single class using your favorite framework, or DOM manipulation tool.</p>
+		<p class="card-text">For this site we are using custom js which regrences the <a href="https://github.com/ded/bonzo">Bonzo API</a></p>
+		<p class="card-text">We utilize this by using some javascript to apply our <span class="highlight">input--filled</span> class</p>
+		<p class="card-text">NOTE: This is a very light setup most of this can be acomplished with a framework, or even jQuery</p>
+		<pre class="line-numbers"><code class="language-javascript">(function() {
+	if (!String.prototype.trim) {
+		(function() {
+			// Make sure we trim BOM and NBSP
+			var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
+			String.prototype.trim = function() {
+				return this.replace(rtrim, '');
+			};
+		})();
+	}
+
+	[].slice.call( document.querySelectorAll( 'input.input__field' ) ).forEach( function( inputEl ) {
+		// in case the input is already filled..
+		if( inputEl.value.trim() !== '' ) {
+			classie.add( inputEl.parentNode, 'input--filled' );
+		}
+
+		// events:
+		inputEl.addEventListener( 'focus', onInputFocus );
+		inputEl.addEventListener( 'blur', onInputBlur );
+	} );
+
+	function onInputFocus( ev ) {
+		classie.add( ev.target.parentNode, 'input--filled' );
+	}
+
+	function onInputBlur( ev ) {
+		if( ev.target.value.trim() === '' ) {
+			classie.remove( ev.target.parentNode, 'input--filled' );
+		}
+	}
+})();
+			</code></pre>
+		</div>
+	</div>
+</div>

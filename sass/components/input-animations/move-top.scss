@@ -32,15 +32,18 @@
 			font-weight: 800;
 		}
 	}
-	.input__field:focus, .input--filled .input__field {
+	.input__field:focus,
+	&.input--filled .input__field {
 		border-color: #da6484;
 	}
-	.input__field:focus + .input__label, .input--filled .input__label {
+	.input__field:focus + .input__label,
+	&.input--filled .input__label {
 		top: -0.3rem;
 		-webkit-animation: anim-move-1 0.25s forwards;
 		animation: anim-move-1 0.25s forwards;
 	}
-	.input__field:focus + .input__label .input__label-content, .input--filled .input__label-content {
+	.input__field:focus + .input__label .input__label-content,
+	&.input--filled .input__label-content {
 		-webkit-animation: anim-move-2 0.25s forwards ease-in;
 		animation: anim-move-2 0.25s forwards ease-in;
 	}

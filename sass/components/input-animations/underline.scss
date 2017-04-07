@@ -53,11 +53,13 @@
 	.input__label-color-3::after {
 		border-color: $secondary-accent;
 	}
-	.input__field:focus + .input__label::after, .input--filled .input__label::after {
+	.input__field:focus + .input__label::after,
+	&.input--filled .input__label::after {
 		-webkit-transform: translate3d(0, 0, 0);
 		transform: translate3d(0, 0, 0);
 	}
-	.input__field:focus + .input__label .input__label-content, .input--filled .input__label .content {
+	.input__field:focus + .input__label .input__label-content,
+	&.input--filled .input__label .content {
 		-webkit-animation: anim-1 0.3s forwards;
 		animation: anim-1 0.3s forwards;
 	}
