@@ -1,0 +1,57 @@
+.pricing--basic {
+	.pricing__item {
+		margin: 1rem;
+		padding: 2rem 2.5rem;
+		text-align: left;
+		color: #262b38;
+		background: #EEF0F3;
+		border-top: 3px solid #EEF0F3;
+		-webkit-transition: border-color 0.3s;
+		transition: border-color 0.3s;
+		&:hover {
+			border-color: #3e62e0;
+		}
+	}
+	.pricing__title {
+		font-size: 1rem;
+		margin: 0 0 1rem;
+	}
+	.pricing__price {
+		font-size: 2rem;
+		font-weight: bold;
+		padding: 0.5rem 0 0.75rem;
+		border-top: 3px solid rgba(139, 144, 157, 0.18);
+	}
+	.pricing__currency {
+		font-size: 0.5rem;
+		vertical-align: super;
+	}
+	.pricing__sentence {
+		font-weight: bold;
+		padding: 0 0 0.5rem;
+		color: #9CA0A9;
+		border-bottom: 3px solid rgba(139, 144, 157, 0.18);
+	}
+	.pricing__feature-list {
+		font-size: 0.85rem;
+		font-style: italic;
+		margin: 0;
+		padding: 0.25rem 0 2.5rem;
+		list-style: none;
+		text-align: right;
+		color: #8b909d;
+	}
+	.pricing__action {
+		font-weight: bold;
+		margin-top: auto;
+		padding: 1rem 2rem;
+		color: #fff;
+		border-radius: 30px;
+		background: #3e62e0;
+		-webkit-transition: background-color 0.3s;
+		transition: background-color 0.3s;
+		&:hover, &:focus {
+			background-color: #3b5ac5;
+		}
+	}
+}

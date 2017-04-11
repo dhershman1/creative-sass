@@ -15,3 +15,10 @@
 	background-color: $shade-150;
 	color: $syntax;
 }
+
+.card-dark {
+	background-color: $shade-900;
+	p {
+		color: #FFF;
+	}
+}
