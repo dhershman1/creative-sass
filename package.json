@@ -16,7 +16,7 @@
   "scripts": {
     "sass": "sass-pack --theme=sass/default.scss --output=output",
     "init": "npm run sass | node index.js",
-		"start": "npm run init",
+		"start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
