@@ -1,12 +1,12 @@
 module.exports = {
 	'parserOptions': {
-		'ecmaVersion': 6,
+		'ecmaVersion': 5,
 		'sourceType': 'module'
 	},
 	'env': {
 		'browser': true,
 		'node': true,
-		'es6': true
+		'es6': false
 	},
 	'rules': {
 		// Possible Errors
@@ -256,7 +256,7 @@ module.exports = {
 		'no-useless-computed-key': 'error',
 		'no-useless-constructor': 'error',
 		'no-useless-rename': 'error',
-		'no-var': 'error',
+		'no-var': 'off',
 		'object-shorthand': 'off',
 		'prefer-arrow-callback': 'off',
 		'prefer-const': 'off',

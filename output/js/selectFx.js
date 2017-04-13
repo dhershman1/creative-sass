@@ -1,100 +1,84 @@
-/**
- * selectFx.js v1.0.0
- * http://www.codrops.com
- *
- * Licensed under the MIT license.
- * http://www.opensource.org/licenses/mit-license.php
- * 
- * Copyright 2014, Codrops
- * http://www.codrops.com
- */
-;( function( window ) {
-	
+( function( window ) {
+
 	'use strict';
 
-	/**
-	 * based on from https://github.com/inuyaksa/jquery.nicescroll/blob/master/jquery.nicescroll.js
-	 */
 	function hasParent( e, p ) {
+		var el = e.target || e.srcElement || e;
+
 		if (!e) return false;
-		var el = e.target||e.srcElement||e||false;
-		while (el && el != p) {
-			el = el.parentNode||false;
+
+		while (el && el !== p) {
+			el = el.parentNode;
 		}
-		return (el!==false);
-	};
-	
-	/**
-	 * extend obj function
-	 */
-	function extend( a, b ) {
-		for( var key in b ) { 
-			if( b.hasOwnProperty( key ) ) {
+
+		return Boolean(el);
+	}
+
+	function extend(a, b) {
+		var key = '';
+
+		for (key in b) {
+			if (b.hasOwnProperty(key)) {
 				a[key] = b[key];
 			}
 		}
+
 		return a;
 	}
 
-	/**
-	 * SelectFx function
-	 */
-	function SelectFx( el, options ) {	
+	function SelectFx(el, options) {
 		this.el = el;
-		this.options = extend( {}, this.options );
-		extend( this.options, options );
-		this._init();
+		this.options = extend({}, this.options);
+		extend(this.options, options);
+		this.init();
 	}
 
 	/**
 	 * SelectFx options
 	 */
 	SelectFx.prototype.options = {
-		// if true all the links will open in a new tab.
-		// if we want to be redirected when we click an option, we need to define a data-link attr on the option of the native select element
-		newTab : true,
-		// when opening the select element, the default placeholder (if any) is shown
-		stickyPlaceholder : true,
-		// callback when changing the value
-		onChange : function( val ) { return false; }
-	}
+		// If true all the links will open in a new tab.
+		// If we want to be redirected when we click an option,
+		// We need to define a data-link attr on the option of the native select element
+		newTab: true,
+		// When opening the select element, the default placeholder (if any) is shown
+		stickyPlaceholder: true,
+		// Callback when changing the value
+		onChange: function() {
+			return false;
+		}
+	};
 
-	/**
-	 * init function
-	 * initialize and cache some vars
-	 */
-	SelectFx.prototype._init = function() {
-		// check if we are using a placeholder for the native select box
-		// we assume the placeholder is disabled and selected by default
+	SelectFx.prototype.init = function() {
+		// Check if we are using a placeholder for the native select box
+		// We assume the placeholder is disabled and selected by default
 		var selectedOpt = this.el.querySelector( 'option[selected]' );
+
 		this.hasDefaultPlaceholder = selectedOpt && selectedOpt.disabled;
 
-		// get selected option (either the first option with attr selected or just the first option)
+		// Get selected option (either the first option with attr selected or just the first option)
 		this.selectedOpt = selectedOpt || this.el.querySelector( 'option' );
 
-		// create structure
-		this._createSelectEl();
+		// Create structure
+		this.createSelectEl();
 
-		// all options
+		// All options
 		this.selOpts = [].slice.call( this.selEl.querySelectorAll( 'li[data-option]' ) );
-		
-		// total options
+
+		// Total options
 		this.selOptsCount = this.selOpts.length;
-		
-		// current index
+
+		// Current index
 		this.current = this.selOpts.indexOf( this.selEl.querySelector( 'li.cs-selected' ) ) || -1;
-		
-		// placeholder elem
+
+		// Placeholder elem
 		this.selPlaceholder = this.selEl.querySelector( 'span.cs-placeholder' );
 
-		// init events
-		this._initEvents();
-	}
+		// Init events
+		this.initEvents();
+	};
 
-	/**
-	 * creates the structure for the select element
-	 */
-	SelectFx.prototype._createSelectEl = function() {
+	SelectFx.prototype.createSelectEl = function() {
 		var self = this, options = '', createOptionHTML = function(el) {
 			var optclass = '', classes = '', link = '';
 
@@ -147,7 +131,7 @@
 	/**
 	 * initialize the events
 	 */
-	SelectFx.prototype._initEvents = function() {
+	SelectFx.prototype.initEvents = function() {
 		var self = this;
 
 		// open/close select
@@ -224,7 +208,7 @@
 		}
 
 		var tmpcurrent = typeof this.preSelCurrent != 'undefined' && this.preSelCurrent !== -1 ? this.preSelCurrent : this.current;
-		
+
 		if( dir === 'prev' && tmpcurrent > 0 || dir === 'next' && tmpcurrent < this.selOptsCount - 1 ) {
 			// save pre selected current - if we click on option, or press enter, or press space this is going to be the index of the current option
 			this.preSelCurrent = dir === 'next' ? tmpcurrent + 1 : tmpcurrent - 1;
@@ -242,7 +226,7 @@
 	SelectFx.prototype._toggleSelect = function() {
 		// remove focus class if any..
 		this._removeFocus();
-		
+
 		if( this._isOpen() ) {
 			if( this.current !== -1 ) {
 				// update placeholder text
@@ -274,7 +258,7 @@
 
 		// update current selected value
 		this.selPlaceholder.textContent = opt.textContent;
-		
+
 		// change native select element´s value
 		this.el.value = opt.getAttribute( 'data-value' );
 
@@ -301,14 +285,14 @@
 	}
 
 	/**
-	 * returns true if select element is opened
+	 * Returns true if select element is opened
 	 */
 	SelectFx.prototype._isOpen = function(opt) {
 		return classie.has( this.selEl, 'cs-active' );
 	}
 
 	/**
-	 * removes the focus class from the option
+	 * Removes the focus class from the option
 	 */
 	SelectFx.prototype._removeFocus = function(opt) {
 		var focusEl = this.selEl.querySelector( 'li.cs-focus' )
@@ -318,7 +302,7 @@
 	}
 
 	/**
-	 * add to global namespace
+	 * Add to global namespace
 	 */
 	window.SelectFx = SelectFx;
 

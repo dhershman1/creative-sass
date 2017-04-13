@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<title>Sass Library</title>
 		<link rel="stylesheet" type="text/css" href="/dist/default.css">
-		<link rel="stylesheet" type="text/css" href="/dist/prism.css">
+		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/styles/atom-one-dark.min.css">
 	</head>
 	<body>
 		<div class="row">
@@ -39,16 +39,15 @@
 							<a class="nav-link {{#equals pageName 'pricing' }}active{{/equals}}" href="/pricing">Pricing</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link {{#equals pageName 'checkout' }}active{{/equals}}" href="/checkout">Checkout</a>
+							<a class="nav-link {{#equals pageName 'cart' }}active{{/equals}}" href="/cart">Cart</a>
 						</li>
 					</ul>
 				</div>
 			</div>
-			<div class="row">
-				{{{content}}}
-			</div>
+			{{{content}}}
 		</div>
 		<script src="/dist/js/classie.js"></script>
-		<script src="/dist/js/prism.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js"></script>
+		<script>hljs.initHighlightingOnLoad();</script>
 	</body>
 </html>

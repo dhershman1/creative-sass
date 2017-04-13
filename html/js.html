@@ -1,22 +1,115 @@
-<div class="card-deck">
-	<div class="card">
-		<h3 class="card-header">How do Input animations work?</h3>
-		<div class="card-block">
-			<p class="card-text">All it takes is adding a single class using your favorite framework, or DOM manipulation tool.</p>
-			<p class="card-text">For this site we are using custom js called <a class="link-highlight" href="https://gist.github.com/dhershman1/5cfaba249f23fb52f63e0722000b1763">Classie.js</a></p>
-			<p class="card-text">We utilize this by using some javascript to apply our <span class="highlight">input--filled</span> class</p>
-			<p class="card-text">NOTE: This is a very light setup most of this can be acomplished with a framework, or even jQuery</p>
-		</div>
+<div class="row">
+	<div class="col text-left">
+		<button class="btn btn-rswipe" id="prev">Previous</button>
 	</div>
-
-	<div class="card">
-		<h3 class="card-header">How do Select animations work?</h3>
-		<div class="card-block">
-			<p class="card-text">All it takes is adding a single class using your favorite framework, or DOM manipulation tool.</p>
-			<p class="card-text">For this site we are using custom js which refrences the <a href="https://github.com/ded/bonzo">Bonzo API</a></p>
-			<p class="card-text">We're also using SelectFx.js from Codrop <a class="link-highlight" href="https://gist.github.com/dhershman1/558cb58bde9664ff3abc23a984df2821">Click here</a> to see it</p>
-			<p class="card-text">We utilize this by using some javascript to apply our <span class="highlight">cs-active</span> class</p>
-			<p class="card-text">NOTE: This is a very light setup most of this can be acomplished with a framework, or even jQuery</p>
-		</div>
+	<div class="col text-right">
+		<button class="btn btn-rswipe" id="next">Next</button>
 	</div>
 </div>
+<div class="card">
+	<h3 class="card-header">Input Animation JS</h3>
+	<div class="card-block">
+		<p class="card-text">All it takes is adding a single class using your favorite framework, or DOM manipulation tool.</p>
+		<p class="card-text">We utilize this by using some javascript to apply our <span class="highlight">input--filled</span> class</p>
+		<p class="card-text">NOTE: This is a very light setup most of this can be acomplished with a framework, or even jQuery</p>
+		<p class="card-text">Vanilla JS Example: </p>
+<pre><code class="javascript">
+(function() {
+// First we need to grab all of our inputs and their input fields
+[].slice.call( document.querySelectorAll( 'input.input__field' ) ).forEach( function( inputEl ) {
+  // In case the input is already filled..
+  if( inputEl.value.trim() !== '' ) {
+    inputEl.parentNode.className += ' ' + 'input--filled';
+  }
+
+  // Events:
+  inputEl.addEventListener( 'focus', onInputFocus );
+  inputEl.addEventListener( 'blur', onInputBlur );
+} );
+// For when the user clicks on our input
+function onInputFocus( ev ) {
+  ev.target.parentNode.className += ' ' + 'input--filled';
+}
+// For when the user clicks off our input
+function onInputBlur( ev ) {
+  // Check to make sure our input value is empty then removing our class
+  if( ev.target.value.trim() === '' ) {
+    var classReg = new RegExp('(^|\\s+)input--filled(\\s+|$)');
+    ev.target.parentNode.className = ev.target.parentNode.className.replace(classReg, ' ');
+  }
+}
+})();
+</code></pre>
+	</div>
+</div>
+
+<div class="card hidden">
+	<h3 class="card-header">Select Animation JS</h3>
+	<div class="card-block">
+		<p class="card-text">All it takes is adding a single class using your favorite framework, or DOM manipulation tool.</p>
+		<p class="card-text">We're also using SelectFx.js from Codrop <a class="link-highlight" href="https://gist.github.com/dhershman1/558cb58bde9664ff3abc23a984df2821">Click here</a> to see it</p>
+		<p class="card-text">I'm currently working on a better way to handle this js than SelectFx.js</p>
+		<p class="card-text">We utilize this by using some javascript to apply our <span class="highlight">cs-active</span> class</p>
+<pre><code class="javascript">(function() {
+  // Select all our select elements
+  [].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) {
+    // Check to see if we are using the circle animation (if you only use a single animation this is not needed)
+    if (el.className.indexOf('cs-circle') > -1) {
+      // Create a new SelectFx class with some of our options (see above for selectFx Source)
+      new SelectFx(el, {
+        stickyPlaceholder: false,
+        // When a new option is selected in our circle select box we need to trigger the image inside our main circle
+        onChange: function(val){
+          var img = document.createElement('img');
+          img.src = '/dist/imgs/'+val+'.png';
+          // Once the imge element loads in set the placeholder circles background to that image
+          img.onload = function() {
+            document.querySelector('.cs-circle span.cs-placeholder').style.backgroundImage = 'url(/dist/imgs/'+val+'.png)';
+          };
+        }
+      });
+    } else {
+      // Else we just let SelectFx handle the element for our other types
+      new SelectFx(el);
+    }
+  } );
+})();
+</code></pre>
+	</div>
+</div>
+<script>
+	(function() {
+		var currCard = 0;
+
+		function prevCard(e) {
+			if (currCard > 0) {
+				allCards[currCard].className += ' hidden';
+
+				currCard--;
+
+				allCards[currCard].className = allCards[currCard].className.replace(' hidden', '');
+			}
+		}
+
+		function nextCard(e) {
+			if (currCard < allCards.length - 1) {
+				allCards[currCard].className += ' hidden';
+
+				currCard++;
+
+				allCards[currCard].className = allCards[currCard].className.replace(' hidden', '');
+			}
+		}
+
+
+		var allCards = [].slice.call(document.querySelectorAll('.card'));
+		[].slice.call(document.querySelectorAll('.btn')).forEach(function(btnEl) {
+			if (btnEl.id === 'prev') {
+				btnEl.addEventListener('click', prevCard);
+			} else {		console.log(allCards);
+
+				btnEl.addEventListener('click', nextCard)
+			}
+		});
+	})();
+</script>

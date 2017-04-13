@@ -27,39 +27,57 @@
 						<span class="highlight">md-trigger</span> - Will fire the modal when clicked set data-modal attribute in the same element with the modal name
 				</li>
 			</ul>
-			<pre class="line-numbers"><code class="language-html">
-				&lt;div class=&quot;md-modal md-fade-slide&quot; id=&quot;modal-test&quot;&gt;
-				 &lt;div class=&quot;md-content&quot;&gt;
-				  &lt;h3&gt;Test Modal&lt;/h3&gt;
-					 &lt;p&gt;Modal Content&lt;/p&gt;
-					 &lt;button class=&quot;btn btn-rswipe&quot;&gt;Modal Button&lt;/button&gt;
-					 &lt;button class=&quot;md-close btn btn-rswipe&quot;&gt;Close&lt;/button&gt;
-				 &lt;/div&gt;
-				&lt;/div&gt;
-				&lt;button class=&quot;md-trigger&quot; data-modal=&quot;modal-test&quot;&gt;Modal Trigger&lt;/button&gt;
-				&lt;div class=&quot;md-overlay&quot;&gt;&lt;/div&gt;
+			<pre><code class="html">
+&lt;div class=&quot;md-modal md-effect-{{ANIMATION}}&quot; id=&quot;modal-test&quot;&gt;
+ &lt;div class=&quot;md-content&quot;&gt;
+  &lt;h3&gt;Test Modal&lt;/h3&gt;
+   &lt;p&gt;Modal Content&lt;/p&gt;
+   &lt;button class=&quot;btn btn-rswipe&quot;&gt;Modal Button&lt;/button&gt;
+   &lt;button class=&quot;md-close btn btn-rswipe&quot;&gt;Close&lt;/button&gt;
+ &lt;/div&gt;
+&lt;/div&gt;
+&lt;button class=&quot;md-trigger&quot; data-modal=&quot;modal-test&quot;&gt;Modal Trigger&lt;/button&gt;
+&lt;div class=&quot;md-overlay&quot;&gt;&lt;/div&gt;
 			</code></pre>
 		</div>
 	</div>
 </div>
-<div class="md-modal md-fade-slide" id="modal-test">
+<div class="md-modal md-effect-slide" id="modal-slide">
 	<div class="md-content">
 		<h3>Test Modal</h3>
 		<div class="md-body">
 			<p>Modal Content</p>
-			<button class="btn btn-rswipe">Modal Button</button>
-			<button class="md-close btn btn-rswipe">Close</button>
+			<button class="btn btn-dswipe">Modal Button</button>
+			<button class="md-close btn btn-dswipe">Close</button>
+		</div>
+	</div>
+</div>
+<div class="md-modal md-effect-fade" id="modal-fade">
+	<div class="md-content">
+		<h3>Test Modal</h3>
+		<div class="md-body">
+			<p>Modal Content</p>
+			<button class="btn btn-dswipe">Modal Button</button>
+			<button class="md-close btn btn-dswipe">Close</button>
 		</div>
 	</div>
 </div>
 <div class="md-overlay"></div>
 <div class="card-deck">
 	<div class="card">
-		<h3 class="card-header">Fade Slide Animation</h3>
+		<h3 class="card-header">Slide In Animation</h3>
 		<div class="card-block text-center">
 			<p class="card-text">Slides modal in to page from the left</p>
-			<button class="btn btn-dswipe md-trigger" data-modal="modal-test">Modal Trigger</button>
-			<p class="card-text">Uses class <span class="highlight">md-fade-slide</span></p>
+			<button class="btn btn-dswipe md-trigger" data-modal="modal-slide">Modal Trigger</button>
+			<p class="card-text">Uses class <span class="highlight">md-effect-slide</span></p>
+		</div>
+	</div>
+	<div class="card">
+		<h3 class="card-header">Fade In Animation</h3>
+		<div class="card-block text-center">
+			<p class="card-text">Fades modal in to page from the center</p>
+			<button class="btn btn-dswipe md-trigger" data-modal="modal-fade">Modal Trigger</button>
+			<p class="card-text">Uses class <span class="highlight">md-effect-fade</span></p>
 		</div>
 	</div>
 </div>
