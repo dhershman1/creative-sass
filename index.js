@@ -7,7 +7,7 @@ const handlebars = require('handlebars');
 const server = new hapi.Server();
 
 server.connection({
-	port: process.env.NODE_PORT || 5000
+	port: process.env.PORT || 5000
 });
 
 server.register([inert, vision], err => {
