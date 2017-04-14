@@ -200,8 +200,6 @@ function dropdownFx(el, options) {
 	}
 
 	init();
-
-	return {};
 }
 
 window.dropdownFx = dropdownFx;

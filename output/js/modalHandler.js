@@ -12,10 +12,10 @@ var classie = window.classie;
 				close = modal.querySelector('.md-close');
 
 			function removeModal(hasPerspective) {
-				classie.remove(modal, 'md-show');
+				classie.removeClass(modal, 'md-show');
 
 				if (hasPerspective) {
-					classie.remove(document.documentElement, 'md-perspective');
+					classie.removeClass(document.documentElement, 'md-perspective');
 				}
 			}
 
@@ -28,7 +28,7 @@ var classie = window.classie;
 				overlay.removeEventListener('click', removeModalHandler);
 				overlay.addEventListener('click', removeModalHandler);
 
-				if (classie.has(el, 'md-setperspective')) {
+				if (classie.hasClass(el, 'md-setperspective')) {
 					setTimeout(function() {
 						classie.addClass(document.documentElement, 'md-perspective');
 					}, 25);
