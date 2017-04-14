@@ -1,4 +1,4 @@
-.md-effect-slide .md-content {
+.cm-effect-slide .cm-content {
 	-webkit-transform: translateX(20%);
 	-moz-transform: translateX(20%);
 	-ms-transform: translateX(20%);
@@ -9,7 +9,7 @@
 	transition: all 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9);
 }
 
-.md-show.md-effect-slide .md-content {
+.cm-show.cm-effect-slide .cm-content {
 	-webkit-transform: translateX(0);
 	-moz-transform: translateX(0);
 	-ms-transform: translateX(0);

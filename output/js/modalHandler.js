@@ -4,33 +4,33 @@ var classie = window.classie;
 
 	function init() {
 
-		var overlay = document.querySelector('.md-overlay');
+		var overlay = document.querySelector('.cm-overlay');
 
-		[].slice.call( document.querySelectorAll('.md-trigger')).forEach( function(el) {
+		[].slice.call( document.querySelectorAll('.cm-trigger')).forEach( function(el) {
 
 			var modal = document.querySelector( '#' + el.getAttribute('data-modal')),
-				close = modal.querySelector('.md-close');
+				close = modal.querySelector('.cm-close');
 
 			function removeModal(hasPerspective) {
-				classie.removeClass(modal, 'md-show');
+				classie.removeClass(modal, 'cm-show');
 
 				if (hasPerspective) {
-					classie.removeClass(document.documentElement, 'md-perspective');
+					classie.removeClass(document.documentElement, 'cm-perspective');
 				}
 			}
 
 			function removeModalHandler() {
-				removeModal(classie.hasClass(el, 'md-setperspective'));
+				removeModal(classie.hasClass(el, 'cm-setperspective'));
 			}
 
 			el.addEventListener('click', function() {
-				classie.addClass(modal, 'md-show');
+				classie.addClass(modal, 'cm-show');
 				overlay.removeEventListener('click', removeModalHandler);
 				overlay.addEventListener('click', removeModalHandler);
 
-				if (classie.hasClass(el, 'md-setperspective')) {
+				if (classie.hasClass(el, 'cm-setperspective')) {
 					setTimeout(function() {
-						classie.addClass(document.documentElement, 'md-perspective');
+						classie.addClass(document.documentElement, 'cm-perspective');
 					}, 25);
 				}
 			});
