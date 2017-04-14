@@ -23,7 +23,7 @@
 	}
 
 
-	[].slice.call(document.querySelectorAll('.btn')).forEach(function(btnEl) {
+	[].slice.call(document.querySelectorAll('.btn.move-card')).forEach(function(btnEl) {
 		if (btnEl.id === 'prev') {
 			btnEl.addEventListener('click', prevCard);
 		} else {
