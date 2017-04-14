@@ -2,14 +2,24 @@
 	<div class="card">
 		<h3 class="card-header">Select Components</h3>
 		<div class="card-block">
+			<p class="card-text">Responsive: <span class="highlight">Yes</span></p>
 			<p class="card-text">
-				Select blocks use simple css classes to set their animation
+				Select blocks use simple css classes to set their animation. You need to create a list to mock out your select box as well as a placeholder
 			</p>
 			<p class="card-text">Example:</p>
 			<pre><code class="html">
-  &lt;select class=&quot;cs-select cs-{ANIMATION}&quot;&gt;
-    &lt;option value=&quot;text&quot;&gt;Text&lt;/option&gt;
-  &lt;/select&gt;</code></pre>
+&lt;div class=&quot;cs-select cs-slide&quot; tabindex=&quot;0&quot;&gt;
+  &lt;span class=&quot;cs-placeholder&quot;&gt;PLACEHOLDER&lt;/span&gt;
+  &lt;div class=&quot;cs-options&quot;&gt;
+    &lt;ul&gt;
+      &lt;li class=&quot;CLASSES&quot; data-option=&quot;&quot; data-value=&quot;VALUE&quot;&gt;&lt;span&gt;TEXT&lt;/span&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+  &lt;select class=&quot;cs-select&quot;&gt;
+    &lt;option value=&quot;&quot; disabled selected&gt;PLACEHOLDER&lt;/option&gt;
+    &lt;option value=&quot;VALUE&quot;&gt;TEXT&lt;/option&gt;
+  &lt;/select&gt;
+&lt;/div&gt;</code></pre>
 		</div>
 	</div>
 </div>
@@ -18,30 +28,55 @@
 		<h3 class="card-header">Slide Animation</h3>
 		<div class="card-block">
 			<p class="card-text">Slides in Menu. Uses icomoon for the icon library</p>
-			<select class="cs-select cs-slide">
-				<option value="sightseeing" data-class="icon-opt1">Sight Seeing</option>
-				<option value="business" data-class="icon-opt2">Business</option>
-				<option value="tools" data-class="icon-opt3">Tools</option>
-				<option value="truck" data-class="icon-opt4">Truck</option>
-				<option value="calendar" data-class="icon-opt5">Calendar</option>
-			</select>
-			<p class="card-text">Uses class <span class="highlight">cs-slide</span></p>
-			<p class="card-text">To set icons use <span class="highlight">data-class="icon-opt[1-5]"</span></p>
-			<p class="card-text">Make sure you set those in the sass to your desired icons content!</p>
+			<div class="cs-select cs-slide" tabindex="0">
+				<span class="cs-placeholder">Choose an Option</span>
+				<div class="cs-options">
+					<ul>
+						<li class="icon-opt1" data-option="" data-value="sightseeing"><span>Sight Seeing</span></li>
+						<li class="icon-opt2" data-option="" data-value="business"><span>Business</span></li>
+						<li class="icon-opt3" data-option="" data-value="tools"><span>Tools</span></li>
+						<li class="icon-opt4" data-option="" data-value="truck"><span>Truck</span></li>
+						<li class="icon-opt5" data-option="" data-value="calendar"><span>Calendar</span></li>
+					</ul>
+				</div>
+				<select class="cs-select">
+					<option value="" disabled selected>Choose an Option</option>
+					<option value="sightseeing">Sight Seeing</option>
+					<option value="business">Business</option>
+					<option value="tools">Tools</option>
+					<option value="truck">Truck</option>
+					<option value="calendar">Calendar</option>
+				</select>
+			</div>
+				<p class="card-text">Uses class <span class="highlight">cs-slide</span></p>
+				<p class="card-text">To set icons use <span class="highlight">data-class="icon-opt[1-5]"</span></p>
+				<p class="card-text">Make sure you set those in the sass to your desired icons content!</p>
 		</div>
 	</div>
 	<div class="card">
 		<h3 class="card-header">Underline Animation</h3>
 		<div class="card-block">
 			<p class="card-text">Slides in underline style menu. Uses icomoon for the icon library</p>
-			<select class="cs-select cs-underline">
-				<option value="" disabled selected>Choose a Bouquet</option>
-				<option value="1">Gardenia + Daisies</option>
-				<option value="2">Roses + Stephanotis</option>
-				<option value="3">Peony + Gerbera</option>
-				<option value="4">Orchid + Limonium</option>
-				<option value="5">Iris + Omithoalum</option>
-			</select>
+			<div class="cs-select cs-underline">
+				<span class="cs-placeholder">Choose a Bouquet</span>
+				<div class="cs-options">
+					<ul>
+						<li data-option="" data-value="1"><span>Gardenia + Daisies</span></li>
+						<li data-option="" data-value="2"><span>Roses + Stephanotis</span></li>
+						<li data-option="" data-value="3"><span>Peony + Gerbera</span></li>
+						<li data-option="" data-value="4"><span>Orchid + Limonium</span></li>
+						<li data-option="" data-value="5"><span>Iris + Omithoalum</span></li>
+					</ul>
+				</div>
+				<select class="cs-select">
+					<option value="" disabled selected>Choose a Bouquet</option>
+					<option value="1">Gardenia + Daisies</option>
+					<option value="2">Roses + Stephanotis</option>
+					<option value="3">Peony + Gerbera</option>
+					<option value="4">Orchid + Limonium</option>
+					<option value="5">Iris + Omithoalum</option>
+				</select>
+			</div>
 			<p class="card-text">Uses class <span class="highlight">cs-underline</span></p>
 		</div>
 	</div>
@@ -49,39 +84,33 @@
 		<h3 class="card-header">Circular Animation</h3>
 		<div class="card-block text-center">
 			<p class="card-text">Creates a cirlce grid menu.</p>
-			<select class="cs-select cs-circle">
-				<option value="" disabled selected>Select an activity</option>
-				<option value="1">1</option>
-				<option value="2">2</option>
-				<option value="3">3</option>
-				<option value="4">4</option>
-				<option value="5">5</option>
-				<option value="6">6</option>
-				<option value="7">7</option>
-				<option value="8">8</option>
-			</select>
+			<div class="cs-select cs-circle" tabindex="0">
+				<span class="cs-placeholder">Select an activity</span>
+				<div class="cs-options">
+					<ul>
+						<li data-option="" data-value="1"><span>1</span></li>
+						<li data-option="" data-value="2"><span>2</span></li>
+						<li data-option="" data-value="3"><span>3</span></li>
+						<li data-option="" data-value="4"><span>4</span></li>
+						<li data-option="" data-value="5"><span>5</span></li>
+						<li data-option="" data-value="6"><span>6</span></li>
+						<li data-option="" data-value="7"><span>7</span></li>
+						<li data-option="" data-value="8"><span>8</span></li>
+					</ul>
+				</div>
+				<select class="cs-select cs-circle">
+					<option value="" disabled="" selected="">Select an activity</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+				</select>
+			</div>
 			<p class="card-text">Uses class <span class="highlight">cs-circle</span></p>
 		</div>
 	</div>
 </div>
-<script src="/dist/js/selectFx.js"></script>
-<script>
-	(function() {
-		[].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) {
-			if (el.className.indexOf('cs-circle') > -1) {
-				new SelectFx(el, {
-					stickyPlaceholder: false,
-					onChange: function(val){
-						var img = document.createElement('img');
-						img.src = '/dist/imgs/'+val+'.png';
-						img.onload = function() {
-							document.querySelector('.cs-circle span.cs-placeholder').style.backgroundImage = 'url(/dist/imgs/'+val+'.png)';
-						};
-					}
-				});
-			} else {
-				new SelectFx(el);
-			}
-		} );
-	})();
-</script>

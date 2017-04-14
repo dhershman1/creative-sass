@@ -1,3 +1,6 @@
+'use strict';
+var classie = window.classie;
+
 function extend(a, b) {
 	var key = '';
 
@@ -37,22 +40,83 @@ function dropdownFx(el, options) {
 	var optCount = 0;
 	var currIndex = 0;
 	var mainDiv = '';
-	var isOpen = false;
 	var preSelCurr = -1;
 
-	function toggleSelect() {
+	function isOpen() {
+		return classie.hasClass(mainDiv, 'cs-active');
+	}
 
+	function removeFocus() {
+		var focusEl = mainDiv.querySelector('li.cs-focus');
+
+		if (focusEl) {
+			classie.removeClass(focusEl, 'cs-focus');
+		}
+	}
+
+	function toggleSelect() {
+		removeFocus();
+
+		if (isOpen()) {
+			if (currIndex !== -1) {
+				placeholder.textContent = optEls[currIndex].textContent;
+			}
+			classie.removeClass(mainDiv, 'cs-active');
+		} else {
+			if (scriptOpts.stickyPlaceholder) {
+				placeholder.textContent = selectedOpt.textContent;
+			}
+			classie.addClass(mainDiv, 'cs-active');
+		}
 	}
 
 	function changeOption() {
+		var currOpt = '';
+		var oldOpt = '';
 
+		if (preSelCurr && preSelCurr !== -1) {
+			currIndex = preSelCurr;
+			preSelCurr = -1;
+		}
+		currOpt = optEls[currIndex];
+		oldOpt = mainDiv.querySelector('li.cs-selected');
+		placeholder.textContent = currOpt.textContent;
+		el.value = currOpt.getAttribute('data-value');
+
+		if (oldOpt) {
+			classie.removeClass(oldOpt, 'cs-selected');
+		}
+		classie.addClass(currOpt, 'cs-selected');
+
+		if (currOpt.getAttribute('data-link')) {
+			if (scriptOpts.newTab) {
+				window.open(currOpt.getAttribute( 'data-link' ), '_blank');
+			} else {
+				window.location = currOpt.getAttribute('data-link');
+			}
+		}
+		scriptOpts.onChange(el.value);
 	}
 
-	function navOpts(dir) {
-		var tmpCurr = (preSelCurr && preSelCurr !== -1) ? preSelCurr : currIndex;
-
-		if (!isOpen) {
+	function navNext() {
+		if (!isOpen()) {
 			toggleSelect();
+		}
+		if (currIndex < optCount - 1) {
+			currIndex++;
+			removeFocus();
+			classie.addClass(optEls[currIndex], 'cs-focus');
+		}
+	}
+
+	function navPrev() {
+		if (!isOpen()) {
+			toggleSelect();
+		}
+		if (currIndex > 0) {
+			currIndex--;
+			removeFocus();
+			classie.addClass(optEls[currIndex], 'cs-focus');
 		}
 	}
 
@@ -64,17 +128,17 @@ function dropdownFx(el, options) {
 				// Up
 				case 38:
 					e.preventDefault();
-					navOpts('prev');
+					navPrev();
 					break;
 				// Down
 				case 40:
 					e.preventDefault();
-					navOpts('next');
+					navNext();
 					break;
 				// Space
 				case 32:
 					e.preventDefault();
-					if (isOpen && preSelCurr && preSelCurr !== -1) {
+					if (isOpen() && preSelCurr && preSelCurr !== -1) {
 						changeOption();
 					}
 					toggleSelect();
@@ -82,7 +146,7 @@ function dropdownFx(el, options) {
 				// Enter
 				case 13:
 					e.preventDefault();
-					if ( isOpen && preSelCurr && preSelCurr !== -1 ) {
+					if ( isOpen() && preSelCurr && preSelCurr !== -1 ) {
 						changeOption();
 						toggleSelect();
 					}
@@ -90,7 +154,7 @@ function dropdownFx(el, options) {
 				// Esc
 				case 27:
 					e.preventDefault();
-					if (isOpen) {
+					if (isOpen()) {
 						toggleSelect();
 					}
 					break;
@@ -116,7 +180,7 @@ function dropdownFx(el, options) {
 		document.addEventListener('click', function(e) {
 			var target = e.target;
 
-			if (isOpen && target !== mainDiv && !hasParent(target, mainDiv)) {
+			if (isOpen() && target !== mainDiv && !hasParent(target, mainDiv)) {
 				toggleSelect();
 			}
 		});
@@ -125,13 +189,13 @@ function dropdownFx(el, options) {
 	}
 
 	function init() {
-		mainDiv = el.querySelector('div.cs-select');
+		mainDiv = el.parentNode;
 		selectedOpt = el.querySelector('option[selected]');
-		placeholder = el.querySelector('.cs-placeholder');
+		placeholder = mainDiv.querySelector('.cs-placeholder');
 		currentSelected = mainDiv.querySelector('li.cs-selected');
 		optEls = [].slice.call(mainDiv.querySelectorAll('li[data-option]'));
 		optCount = optEls.length;
-		currIndex = optEls.indexOf(mainDiv.querySelector( 'li.cs-selected' )) || -1;
+		currIndex = optEls.indexOf(currentSelected) || -1;
 		events();
 	}
 

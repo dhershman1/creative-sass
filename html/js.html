@@ -77,39 +77,3 @@ function onInputBlur( ev ) {
 </code></pre>
 	</div>
 </div>
-<script>
-	(function() {
-		var currCard = 0;
-
-		function prevCard(e) {
-			if (currCard > 0) {
-				allCards[currCard].className += ' hidden';
-
-				currCard--;
-
-				allCards[currCard].className = allCards[currCard].className.replace(' hidden', '');
-			}
-		}
-
-		function nextCard(e) {
-			if (currCard < allCards.length - 1) {
-				allCards[currCard].className += ' hidden';
-
-				currCard++;
-
-				allCards[currCard].className = allCards[currCard].className.replace(' hidden', '');
-			}
-		}
-
-
-		var allCards = [].slice.call(document.querySelectorAll('.card'));
-		[].slice.call(document.querySelectorAll('.btn')).forEach(function(btnEl) {
-			if (btnEl.id === 'prev') {
-				btnEl.addEventListener('click', prevCard);
-			} else {		console.log(allCards);
-
-				btnEl.addEventListener('click', nextCard)
-			}
-		});
-	})();
-</script>

@@ -1,107 +1,106 @@
 <div class="col-12">
-  <div class="card">
-  <h3 class="card-header">Checkout Components</h3>
-  <div class="card-block">
-  <p class="card-text">
-  Animated checkout componentes
-  </p>
-  <p class="card-text">Example:</p>
-  <pre><code class="html">
-  &lt;div class=&quot;checkout checkout--{{ANIMATION}}&quot;&gt;
-    &lt;a class=&quot;checkout__button&quot;href=&quot;#&quot;&gt;
-     &lt;span class=&quot;checkout__text&quot;&gt;
-      &lt;i class=&quot;checkout__icon icon icon-truck&quot;&gt;&lt;/i&gt;
-     &lt;/span&gt;
-    &lt;/a&gt;
-    &lt;div class=&quot;checkout__order&quot;&gt;
-     &lt;div class=&quot;checkout__order-inner&quot;&gt;
-      &lt;table class=&quot;checkout__summary&quot;&gt;
-       &lt;thead&gt;
-        &lt;tr&gt;&lt;th&gt;Your Order&lt;/th&gt;&lt;th&gt;Price&lt;/th&gt;&lt;/tr&gt;
-       &lt;/thead&gt;
-       &lt;tfoot&gt;
-        &lt;tr&gt;&lt;th colspan=&quot;2&quot;&gt;Total &lt;span class=&quot;checkout__total&quot;&gt;$56.20&lt;/span&gt;&lt;/th&gt;&lt;/tr&gt;
-       &lt;/tfoot&gt;
-       &lt;tbody&gt;
-        &lt;tr&gt;&lt;td&gt;Imitations &lt;span&gt;Mark Lanegan&lt;/span&gt;&lt;/td&gt;&lt;td&gt;$9.90&lt;/td&gt;&lt;/tr&gt;
-       &lt;/tbody&gt;
-      &lt;/table&gt;
-      &lt;button class=&quot;checkout__option checkout__option--silent checkout__cancel&quot;&gt;&lt;i class=&quot;icon icon-cart&quot;&gt;&lt;/i&gt; Continue Shopping&lt;/button&gt;&lt;button class=&quot;checkout__option&quot;&gt;Buy&lt;/button&gt;
-      &lt;button class=&quot;checkout__close checkout__cancel&quot;&gt;&lt;i class=&quot;icon icon-cross&quot;&gt;&lt;/i&gt;Close&lt;/button&gt;
-     &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  </code></pre>
-  </div>
-  </div>
+	<div class="card">
+	<h3 class="card-header">Checkout Components</h3>
+	<div class="card-block">
+		<p class="card-text">Responsive: <span class="highlight">Semi</span></p>
+	<p class="card-text">
+	Animated checkout componentes
+	</p>
+	<p class="card-text">Example:</p>
+	<pre><code class="html">
+	&lt;div class=&quot;checkout checkout--{{ANIMATION}}&quot;&gt;
+		&lt;a class=&quot;checkout__button&quot;href=&quot;#&quot;&gt;
+		 &lt;span class=&quot;checkout__text&quot;&gt;
+			&lt;i class=&quot;checkout__icon icon icon-truck&quot;&gt;&lt;/i&gt;
+		 &lt;/span&gt;
+		&lt;/a&gt;
+		&lt;div class=&quot;checkout__order&quot;&gt;
+		 &lt;div class=&quot;checkout__order-inner&quot;&gt;
+			&lt;table class=&quot;checkout__summary&quot;&gt;
+			 &lt;thead&gt;
+				&lt;tr&gt;&lt;th&gt;Your Order&lt;/th&gt;&lt;th&gt;Price&lt;/th&gt;&lt;/tr&gt;
+			 &lt;/thead&gt;
+			 &lt;tfoot&gt;
+				&lt;tr&gt;&lt;th colspan=&quot;2&quot;&gt;Total &lt;span class=&quot;checkout__total&quot;&gt;$56.20&lt;/span&gt;&lt;/th&gt;&lt;/tr&gt;
+			 &lt;/tfoot&gt;
+			 &lt;tbody&gt;
+				&lt;tr&gt;&lt;td&gt;Imitations &lt;span&gt;Mark Lanegan&lt;/span&gt;&lt;/td&gt;&lt;td&gt;$9.90&lt;/td&gt;&lt;/tr&gt;
+			 &lt;/tbody&gt;
+			&lt;/table&gt;
+			&lt;button class=&quot;checkout__option checkout__option--silent checkout__cancel&quot;&gt;&lt;i class=&quot;icon icon-cart&quot;&gt;&lt;/i&gt; Continue Shopping&lt;/button&gt;&lt;button class=&quot;checkout__option&quot;&gt;Buy&lt;/button&gt;
+			&lt;button class=&quot;checkout__close checkout__cancel&quot;&gt;&lt;i class=&quot;icon icon-cross&quot;&gt;&lt;/i&gt;Close&lt;/button&gt;
+		 &lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	</code></pre>
+	</div>
+	</div>
 </div>
 <div class="col-12 mt-5">
-  <div class="card">
-  <h3 class="card-header">Corner Flat Animation</h3>
-  <div class="card-block">
-  <p class="card-text">Animated a corner check out menu</p>
-  <div class="dummy-browser">
-  <div class="dummy-header"></div>
-  <div class="checkout checkout--cornerflat">
-  <a class="checkout__button"href="#">
-  <span class="checkout__text">
-  <i class="checkout__icon icon icon-truck"></i>
-  </span>
-  </a>
-  <div class="checkout__order">
-  <div class="checkout__order-inner">
-  <table class="checkout__summary">
-  <thead>
-  <tr><th>Your Order</th><th>Price</th></tr>
-  </thead>
-  <tfoot>
-  <tr><th colspan="2">Total <span class="checkout__total">$56.20</span></th></tr>
-  </tfoot>
-  <tbody>
-  <tr><td>Imitations <span>Mark Lanegan</span></td><td>$9.90</td></tr>
-  <tr><td>In The Silence <span>Ásgeir</span></td><td>$5.50</td></tr>
-  <tr><td>Out Of Exile <span>Audioslave</span></td><td>$11.00</td></tr>
-  <tr><td>London <span>Frank Sinatra</span></td><td>$19.90</td></tr>
-  <tr><td>Cure For Pain <span>Morphine</span></td><td>$9.90</td></tr>
-  </tbody>
-  </table><!-- /checkout__summary -->
-  <button class="checkout__option checkout__option--silent checkout__cancel"><i class="icon icon-cart"></i> Continue Shopping</button><button class="checkout__option">Buy</button>
-  <button class="checkout__close checkout__cancel"><i class="icon icon-cross"></i>Close</button>
-  </div><!-- /checkout__order-inner -->
-  </div><!-- /checkout__order -->
-  </div>
-  <div class="dummy-grid dummy-grid--filled">
-  <div class="dummy-grid__item"></div>
-  <div class="dummy-grid__item"></div>
-  <div class="dummy-grid__item"></div>
-  <div class="dummy-grid__item"></div>
-  <div class="dummy-grid__item"></div>
-  <div class="dummy-grid__item"></div>
-  <div class="dummy-grid__item"></div>
-  <div class="dummy-grid__item"></div>
-  </div><!-- /dummy-grid -->
-  </div>
-  </div>
-  </div>
+	<div class="card">
+	<h3 class="card-header">Corner Flat Animation</h3>
+	<div class="card-block">
+	<p class="card-text">Animated a corner check out menu</p>
+	<div class="dummy-browser">
+	<div class="dummy-header"></div>
+	<div class="checkout checkout--cornerflat">
+	<a class="checkout__button"href="#">
+	<span class="checkout__text">
+	<i class="checkout__icon icon icon-truck"></i>
+	</span>
+	</a>
+	<div class="checkout__order">
+	<div class="checkout__order-inner">
+	<table class="checkout__summary">
+	<thead>
+	<tr><th>Your Order</th><th>Price</th></tr>
+	</thead>
+	<tfoot>
+	<tr><th colspan="2">Total <span class="checkout__total">$56.20</span></th></tr>
+	</tfoot>
+	<tbody>
+	<tr><td>Imitations <span>Mark Lanegan</span></td><td>$9.90</td></tr>
+	<tr><td>In The Silence <span>Ásgeir</span></td><td>$5.50</td></tr>
+	<tr><td>Out Of Exile <span>Audioslave</span></td><td>$11.00</td></tr>
+	<tr><td>London <span>Frank Sinatra</span></td><td>$19.90</td></tr>
+	<tr><td>Cure For Pain <span>Morphine</span></td><td>$9.90</td></tr>
+	</tbody>
+	</table><!-- /checkout__summary -->
+	<button class="checkout__option checkout__option--silent checkout__cancel"><i class="icon icon-cart"></i> Continue Shopping</button><button class="checkout__option">Buy</button>
+	<button class="checkout__close checkout__cancel"><i class="icon icon-cross"></i>Close</button>
+	</div><!-- /checkout__order-inner -->
+	</div><!-- /checkout__order -->
+	</div>
+	<div class="dummy-grid dummy-grid--filled">
+	<div class="dummy-grid__item"></div>
+	<div class="dummy-grid__item"></div>
+	<div class="dummy-grid__item"></div>
+	<div class="dummy-grid__item"></div>
+	<div class="dummy-grid__item"></div>
+	<div class="dummy-grid__item"></div>
+	<div class="dummy-grid__item"></div>
+	<div class="dummy-grid__item"></div>
+	</div><!-- /dummy-grid -->
+	</div>
+	</div>
+	</div>
 </div>
 <script>
-  (function() {
-  [].slice.call( document.querySelectorAll( '.checkout' ) ).forEach( function( el ) {
-  console.log(el);
-  var openCtrl = el.querySelector( '.checkout__button' ),
-  closeCtrls = el.querySelectorAll( '.checkout__cancel' );
+	(function() {
+	[].slice.call( document.querySelectorAll( '.checkout' ) ).forEach( function( el ) {
+	var openCtrl = el.querySelector( '.checkout__button' ),
+	closeCtrls = el.querySelectorAll( '.checkout__cancel' );
 
-  openCtrl.addEventListener( 'click', function(ev) {
-  ev.preventDefault();
-  console.log(ev);
-  classie.add( el, 'checkout--active' );
-  } );
+	openCtrl.addEventListener( 'click', function(ev) {
+	ev.preventDefault();
+	classie.addClass( el, 'checkout--active' );
+	} );
 
-  [].slice.call( closeCtrls ).forEach( function( ctrl ) {
-  ctrl.addEventListener( 'click', function() {
-  classie.remove( el, 'checkout--active' );
-  } );
-  } );
-  } );
-  })();
+	[].slice.call( closeCtrls ).forEach( function( ctrl ) {
+	ctrl.addEventListener( 'click', function() {
+	classie.removeClass( el, 'checkout--active' );
+	} );
+	} );
+	} );
+	})();
 </script>

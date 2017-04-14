@@ -51,7 +51,7 @@ module.exports = {
 		'block-scoped-var': 'error',
 		'class-methods-use-this': 'error',
 		'complexity': ['error', {
-			'max': 3
+			'max': 5
 		}],
 		'consistent-return': 'error',
 		'curly': ['error', 'multi-line'],
@@ -197,7 +197,7 @@ module.exports = {
 		'no-array-constructor': 'error',
 		'no-bitwise': 'error',
 		'no-continue': 'off',
-		'no-inline-comments': 'error',
+		'no-inline-comments': 'warn',
 		'no-lonely-if': 'error',
 		'no-mixed-operators': 'error',
 		'no-mixed-spaces-and-tabs': 'error',
@@ -264,7 +264,7 @@ module.exports = {
 		'prefer-numeric-literals': 'off',
 		'prefer-rest-params': 'off',
 		'prefer-spread': 'off',
-		'prefer-template': 'warn',
+		'prefer-template': 'off',
 		'require-yield': 'off',
 		'rest-spread-spacing': 'off',
 		'sort-imports': 'off',
