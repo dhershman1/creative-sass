@@ -4875,7 +4875,6 @@ body {
 .checkout--active ~ .dummy-sidebar__overlay {
   opacity: 1; }
 
-/*MEDIA QUERY BREAKS*/
 .img-circle {
   border-radius: 50%; }
 
@@ -4898,9 +4897,15 @@ body {
   .card-dark p {
     color: #FFF; }
 
-@media (max-width: 460px) {
-  .navbar-wrapper {
-    display: none; } }
+.link-highlight {
+  padding: 0.2rem; }
+  .link-highlight:hover {
+    color: #FFF;
+    background-color: #2f98c1;
+    box-shadow: 2px 2px 5px #4a4a4a;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s; }
 
 .footer {
   color: #FFF;
@@ -4988,7 +4993,8 @@ body {
     .btn-rswipe:active:after {
       width: 100%; }
 
-nav a {
+nav.cl a,
+div.cl a {
   position: relative;
   display: inline-block;
   margin: 1rem 1.5rem;
@@ -4999,27 +5005,182 @@ nav a {
   font-weight: 400;
   text-shadow: 0 0 1px #4a4a4a;
   font-size: 1rem; }
-  nav a :hover {
+  nav.cl a :hover,
+  div.cl a :hover {
     outline: none; }
-  nav a:focus {
+  nav.cl a:focus,
+  div.cl a:focus {
     outline: none; }
 
-.link-effect a {
+.cl-brackets a::before, .cl-brackets a::after {
+  display: inline-block;
+  opacity: 0;
+  -webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+  -moz-transition: -moz-transform 0.3s, opacity 0.2s;
+  transition: transform 0.3s, opacity 0.2s; }
+
+.cl-brackets a::before {
+  margin-right: 1rem;
+  content: '[';
+  -webkit-transform: translateX(20px);
+  -moz-transform: translateX(20px);
+  transform: translateX(20px); }
+
+.cl-brackets a::after {
+  margin-left: 1rem;
+  content: ']';
+  -webkit-transform: translateX(-20px);
+  -moz-transform: translateX(-20px);
+  transform: translateX(-20px); }
+
+.cl-brackets a:hover::before, .cl-brackets a:hover::after {
+  opacity: 1;
+  -webkit-transform: translateX(0px);
+  -moz-transform: translateX(0px);
+  transform: translateX(0px); }
+
+.cl-brackets a:focus::before, .cl-brackets a:focus::after {
+  opacity: 1;
+  -webkit-transform: translateX(0px);
+  -moz-transform: translateX(0px);
+  transform: translateX(0px); }
+
+.cl-lines a {
+  padding: 12px 10px 10px;
+  color: #566473;
+  text-shadow: none;
+  font-weight: 700; }
+  .cl-lines a::before {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #566473;
+    content: '';
+    -webkit-transition: -webkit-transform 0.3s;
+    -moz-transition: -moz-transform 0.3s;
+    transition: transform 0.3s;
+    -webkit-transform: scale(0.85);
+    -moz-transform: scale(0.85);
+    transform: scale(0.85); }
+  .cl-lines a::after {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #566473;
+    content: '';
+    -webkit-transition: -webkit-transform 0.3s;
+    -moz-transition: -moz-transform 0.3s;
+    transition: transform 0.3s;
+    -webkit-transform: scale(0.85);
+    -moz-transform: scale(0.85);
+    transform: scale(0.85);
+    opacity: 0;
+    -webkit-transition: top 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+    -moz-transition: top 0.3s, opacity 0.3s, -moz-transform 0.3s;
+    transition: top 0.3s, opacity 0.3s, transform 0.3s; }
+  .cl-lines a:hover::before, .cl-lines a:hover::after {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    transform: scale(1); }
+  .cl-lines a:focus::before, .cl-lines a:focus::after {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    transform: scale(1); }
+  .cl-lines a:hover::after, .cl-lines a:focus::after {
+    top: 0%;
+    opacity: 1; }
+
+.cl-border a {
+  padding: 1rem;
+  color: #237546;
+  font-weight: 700;
+  text-shadow: none;
+  -webkit-transition: color 0.3s;
+  -moz-transition: color 0.3s;
+  transition: color 0.3s; }
+  .cl-border a::before, .cl-border a::after {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #2f98c1;
+    content: '';
+    opacity: 0;
+    -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+    -moz-transition: opacity 0.3s, -moz-transform 0.3s;
+    transition: opacity 0.3s, transform 0.3s;
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    transform: translateY(-10px); }
+  .cl-border a::before {
+    top: 0;
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    transform: translateY(-10px); }
+  .cl-border a::after {
+    bottom: 0;
+    -webkit-transform: translateY(10px);
+    -moz-transform: translateY(10px);
+    transform: translateY(10px); }
+  .cl-border a:hover, .cl-border a:focus {
+    color: #2f98c1; }
+  .cl-border a:hover::before, .cl-border a:focus::before, .cl-border a:hover::after, .cl-border a:focus::after {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    transform: translateY(0px); }
+
+.cl-border-slide a {
+  margin: 0 10px;
+  padding: 10px 20px; }
+  .cl-border-slide a::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #0af574;
+    content: '';
+    -webkit-transition: top 0.3s;
+    -moz-transition: top 0.3s;
+    transition: top 0.3s; }
+  .cl-border-slide a::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 2px;
+    background: #0af574;
+    content: '';
+    -webkit-transition: height 0.3s;
+    -moz-transition: height 0.3s;
+    transition: height 0.3s; }
+  .cl-border-slide a:hover::before {
+    top: 100%;
+    opacity: 1; }
+  .cl-border-slide a:hover::after {
+    height: 100%; }
+
+.cl-border-switch a {
   padding: 0 20px;
   height: 45px;
   line-height: 45px; }
-  .link-effect a::before, .link-effect a::after {
+  .cl-border-switch a::before, .cl-border-switch a::after {
     position: absolute;
     width: 45px;
     height: 2px;
-    background: #0af574;
+    background: #597291;
     content: '';
     opacity: 0.2;
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     transition: all 0.3s;
     pointer-events: none; }
-  .link-effect a::before {
+  .cl-border-switch a::before {
     top: 0;
     left: 0;
     -webkit-transform: rotate(90deg);
@@ -5028,7 +5189,7 @@ nav a {
     -webkit-transform-origin: 0 0;
     -moz-transform-origin: 0 0;
     transform-origin: 0 0; }
-  .link-effect a::after {
+  .cl-border-switch a::after {
     right: 0;
     bottom: 0;
     -webkit-transform: rotate(90deg);
@@ -5037,30 +5198,41 @@ nav a {
     -webkit-transform-origin: 100% 0;
     -moz-transform-origin: 100% 0;
     transform-origin: 100% 0; }
-  .link-effect a:hover::before, .link-effect a:hover::after {
+  .cl-border-switch a:hover::before, .cl-border-switch a:hover::after {
     opacity: 1; }
-  .link-effect a:focus::before, .link-effect a:focus::after {
+  .cl-border-switch a:focus::before, .cl-border-switch a:focus::after {
     opacity: 1; }
-  .link-effect a:hover::before, .link-effect a:focus::before {
+  .cl-border-switch a:hover::before, .cl-border-switch a:focus::before {
     left: 50%;
     -webkit-transform: rotate(0deg) translateX(-50%);
     -moz-transform: rotate(0deg) translateX(-50%);
     transform: rotate(0deg) translateX(-50%); }
-  .link-effect a:hover::after, .link-effect a:focus::after {
+  .cl-border-switch a:hover::after, .cl-border-switch a:focus::after {
     right: 50%;
     -webkit-transform: rotate(0deg) translateX(50%);
     -moz-transform: rotate(0deg) translateX(50%);
     transform: rotate(0deg) translateX(50%); }
 
-.link-highlight {
-  padding: 0.2rem; }
-  .link-highlight:hover {
-    color: #FFF;
-    background-color: #2f98c1;
-    box-shadow: 2px 2px 5px #4a4a4a;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s; }
+.cl-text-fill a {
+  padding: 10px 0;
+  border-top: 2px solid #2f98c1;
+  color: #2f98c1;
+  text-shadow: none; }
+  .cl-text-fill a::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    padding: 10px 0;
+    max-width: 0;
+    border-bottom: 2px solid #597291;
+    color: #597291;
+    content: attr(data-hover);
+    -webkit-transition: max-width 0.5s;
+    -moz-transition: max-width 0.5s;
+    transition: max-width 0.5s; }
+  .cl-text-fill a:hover::before, .cl-text-fill a:focus::before {
+    max-width: 100%; }
 
 .input {
   position: relative;

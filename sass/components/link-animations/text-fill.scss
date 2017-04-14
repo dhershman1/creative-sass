@@ -1,0 +1,23 @@
+.cl-text-fill a {
+	padding: 10px 0;
+	border-top: 2px solid $primary;
+	color: $primary;
+	text-shadow: none;
+	&::before {
+		position: absolute;
+		top: 0;
+		left: 0;
+		overflow: hidden;
+		padding: 10px 0;
+		max-width: 0;
+		border-bottom: 2px solid $primary-accent;
+		color: $primary-accent;
+		content: attr(data-hover);
+		-webkit-transition: max-width 0.5s;
+		-moz-transition: max-width 0.5s;
+		transition: max-width 0.5s;
+	}
+	&:hover::before, &:focus::before {
+		max-width: 100%;
+	}
+}
