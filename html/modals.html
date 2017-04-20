@@ -1,48 +1,47 @@
-<div class="col-12">
-	<div class="card">
-		<h3 class="card-header">Modal Components</h3>
-		<div class="card-block">
-			<p class="card-text">Responsive: <span class="highlight">Yes</span></p>
-			<p class="card-text">
-				Modals consist of html placed on the page with a <span class="highlight">cm-overlay</span> class on a div element
-				This produces both the modal and the screen overlay for the page. Modal must have an id attribute with the modal name
-			</p>
-			<p class="card-text">Classes</p>
-			<ul>
-				<li>
-						<span class="highlight">cm-modal</span> - Says a div will be used as a modal
-				</li>
-				<li>
-						<span class="highlight">cm-{ANIMATION}</span> - Determine the Modal animation
-				</li>
-				<li>
-						<span class="highlight">cm-content</span> - Sets the content wrapper use an h3 tag in this wrapper for a header
-				</li>
-				<li>
-						<span class="highlight">cm-close</span> - Closes the modal
-				</li>
-				<li>
-						<span class="highlight">cm-overlay</span> - Will open an overlay behind the modal
-				</li>
-				<li>
-						<span class="highlight">cm-trigger</span> - Will fire the modal when clicked set data-modal attribute in the same element with the modal name
-				</li>
-			</ul>
-			<pre><code class="html">
+<div class="card">
+	<h3 class="card-header">Modal Components</h3>
+	<div class="card-block">
+		<p class="card-text">Responsive: <span class="highlight">Yes</span></p>
+		<p class="card-text">
+			Modals consist of html placed on the page with a <span class="highlight">cm-overlay</span> class on a div element
+			This produces both the modal and the screen overlay for the page. Modal must have an id attribute with the modal name
+		</p>
+		<p class="card-text">Classes</p>
+		<ul>
+			<li>
+					<span class="highlight">cm-modal</span> - Says a div will be used as a modal
+			</li>
+			<li>
+					<span class="highlight">cm-{ANIMATION}</span> - Determine the Modal animation
+			</li>
+			<li>
+					<span class="highlight">cm-content</span> - Sets the content wrapper use an h3 tag in this wrapper for a header
+			</li>
+			<li>
+					<span class="highlight">cm-close</span> - Closes the modal
+			</li>
+			<li>
+					<span class="highlight">cm-overlay</span> - Will open an overlay behind the modal
+			</li>
+			<li>
+					<span class="highlight">cm-trigger</span> - Will fire the modal when clicked set data-modal attribute in the same element with the modal name
+			</li>
+		</ul>
+		<pre><code class="html">
 &lt;div class=&quot;cm-modal cm-effect-{{ANIMATION}}&quot; id=&quot;modal-test&quot;&gt;
- &lt;div class=&quot;cm-content&quot;&gt;
-  &lt;h3&gt;Test Modal&lt;/h3&gt;
-   &lt;p&gt;Modal Content&lt;/p&gt;
-   &lt;button class=&quot;cb cb-rswipe&quot;&gt;Modal Button&lt;/button&gt;
-   &lt;button class=&quot;cm-close cb cb-rswipe&quot;&gt;Close&lt;/button&gt;
- &lt;/div&gt;
+&lt;div class=&quot;cm-content&quot;&gt;
+&lt;h3&gt;Test Modal&lt;/h3&gt;
+ &lt;p&gt;Modal Content&lt;/p&gt;
+ &lt;button class=&quot;cb cb-rswipe&quot;&gt;Modal Button&lt;/button&gt;
+ &lt;button class=&quot;cm-close cb cb-rswipe&quot;&gt;Close&lt;/button&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;button class=&quot;cm-trigger&quot; data-modal=&quot;modal-test&quot;&gt;Modal Trigger&lt;/button&gt;
 &lt;div class=&quot;cm-overlay&quot;&gt;&lt;/div&gt;
-			</code></pre>
-		</div>
+		</code></pre>
 	</div>
 </div>
+
 <div class="cm-modal cm-effect-slide" id="modal-slide">
 	<div class="cm-content">
 		<h3>Test Modal</h3>

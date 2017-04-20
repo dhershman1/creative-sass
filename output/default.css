@@ -4587,6 +4587,7 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   src: url(fonts/Raleway-Regular.ttf); }
 
 body {
+  margin: 0;
   font-family: 'Raleway';
   background: #eee;
   background: radial-gradient(#ddd, #ccc); }
@@ -4903,7 +4904,7 @@ table {
   color: #FFF; }
 
 .highlight {
-  background-color: #b9c1ca;
+  background-color: #ebebeb;
   color: #d96383; }
 
 .card-dark {
