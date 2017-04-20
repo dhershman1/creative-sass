@@ -1,0 +1,79 @@
+<div class="col-12">
+	<div class="card">
+		<h3 class="card-header">Ripple Component</h3>
+		<div class="card-block">
+			<p class="card-text">Responsive: <span class="highlight">Yes</span></p>
+			<p class="card-text">
+				Creates a Ripple animation over the desired element (the cards below are also rippled if you click them)
+			</p>
+			<p class="card-text">Example:</p>
+			<pre><code class="html">
+	&lt;button class=&quot;ripple HELPERS&quot;&gt;Button Ripple!&lt;/buton&gt;
+	&lt;td class=&quot;ripple HELPERS&quot;&gt;Table Cell Ripple!&lt;/td&gt;
+	&lt;tr class=&quot;ripple HELPERS&quot;&gt;Table Row Ripple!&lt;/tr&gt;
+	&lt;table class=&quot;ripple HELPERS&quot;&gt;Table Ripple!&lt;/table&gt;
+			</pre></code>
+			<h4>Helper Classes</h4>
+			<ul>
+				<li><span class="highlight">dark</span> - Creates a Dark Ripple Color</li>
+				<li><span class="highlight">light</span> - Creates a Light Ripple Color</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div class="card-deck">
+	<div class="card ripple dark">
+		<h3 class="card-header">Regular Buttons</h3>
+		<div class="card-block">
+			<p class="card-text">Ripple over dark/light colored buttons</p>
+			<div class="mb-3">
+				<button class="btn-light btn ripple dark">Click me!</button>
+				<button class="btn-grey round btn ripple light">+</button>
+				<button class="btn-grey round btn ripple dark">+</button>
+				<button class="btn-dark btn ripple light">Click me!</button>
+			</div>
+			<p class="card-text">Uses class <span class="highlight">.ripple.dark</span> and <span class="highlight">.ripple.light</span></p>
+		</div>
+	</div>
+	<div class="card ripple dark">
+		<h3 class="card-header">Colored Buttons</h3>
+		<div class="card-block">
+			<p class="card-text">Ripple over colored buttons</p>
+			<div class="mb-3 text-center">
+				<div class="row text-center mb-2">
+					<button class="btn btn-primary ripple light mr-2">Click me!</button>
+					<button class="btn btn-danger ripple light">Click me!</button>
+				</div>
+				<div class="row text-center">
+					<button class="btn btn-info ripple dark mr-2">Click me!</button>
+					<button class="btn btn-success ripple dark">Click me!</button>
+				</div>
+			</div>
+			<p class="card-text">Uses class <span class="highlight">.ripple.dark</span> and <span class="highlight">.ripple.light</span></p>
+		</div>
+	</div>
+	<div class="card ripple dark">
+		<h3 class="card-header">Tables</h3>
+		<div class="card-block">
+			<p class="card-text">Ripple over colored buttons</p>
+			<div class="mb-3">
+				<table class="ripple dark">
+					<tr>
+						<td class="ripple dark">Ripple cell!</td>
+						<td class="ripple light">Ripple cell!</td>
+					</tr>
+					<tr class="ripple dark">
+						<td>Ripple row!</td>
+						<td>Ripple row!</td>
+					</tr>
+					<tr>
+						<td>Even the table!</td>
+						<td>Has ripples!</td>
+					</tr>
+				</table>
+			</div>
+			<p class="card-text">Uses class <span class="highlight">.ripple.dark</span> and <span class="highlight">.ripple.light</span></p>
+		</div>
+	</div>
+</div>

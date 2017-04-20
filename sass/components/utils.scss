@@ -27,6 +27,30 @@
 	}
 }
 
+.round {
+	border-radius: 50%;
+	width: 36px;
+	height: 36px;
+	padding: 0;
+}
+
+.btn-grey {
+	background-color: #888;
+}
+
+.btn-light {
+	box-shadow: 0 0 0;
+	color: rgba(0, 0, 0, 0.81);
+	&:hover {
+		box-shadow: 0 0 0;
+	}
+}
+
+.btn-dark {
+	background: #333;
+	color: #FFF;
+}
+
 .link-highlight {
 	padding: 0.2rem;
 	&:hover {

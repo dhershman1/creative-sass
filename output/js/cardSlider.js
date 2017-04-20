@@ -1,29 +1,31 @@
+var classie = window.classie;
+
 (function() {
 	var currCard = 0;
 	var allCards = [].slice.call(document.querySelectorAll('.card'));
 
 	function prevCard() {
 		if (currCard > 0) {
-			allCards[currCard].className += ' hidden';
+			classie.addClass(allCards[currCard], 'hidden');
 
 			currCard--;
 
-			allCards[currCard].className = allCards[currCard].className.replace(' hidden', '');
+			classie.removeClass(allCards[currCard], 'hidden');
 		}
 	}
 
 	function nextCard() {
 		if (currCard < allCards.length - 1) {
-			allCards[currCard].className += ' hidden';
+			classie.addClass(allCards[currCard], 'hidden');
 
 			currCard++;
 
-			allCards[currCard].className = allCards[currCard].className.replace(' hidden', '');
+			classie.removeClass(allCards[currCard], 'hidden');
 		}
 	}
 
 
-	[].slice.call(document.querySelectorAll('.btn.move-card')).forEach(function(btnEl) {
+	[].slice.call(document.querySelectorAll('.cb.move-card')).forEach(function(btnEl) {
 		if (btnEl.id === 'prev') {
 			btnEl.addEventListener('click', prevCard);
 		} else {

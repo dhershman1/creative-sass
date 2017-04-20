@@ -34,11 +34,25 @@ function classie() {
 		fn(el, cl);
 	}
 
+	function findChild(el, cl) {
+		var i = 0;
+		var len = el.childNodes.length;
+
+		for (i; i < len; i++) {
+			if (el.childNodes[i].className && el.childNodes[i].className.includes(cl)) {
+				return el.childNodes[i];
+			}
+		}
+
+		return null;
+	}
+
 	return {
 		hasClass: hasClass,
 		addClass: addClass,
 		removeClass: removeClass,
-		toggleClass: toggleClass
+		toggleClass: toggleClass,
+		findChild: findChild
 	};
 }
 

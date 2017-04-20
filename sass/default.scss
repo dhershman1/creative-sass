@@ -13,6 +13,24 @@
 
 body {
 	font-family: 'Raleway';
+	background: #eee;
+	background: radial-gradient(#ddd, #ccc);
+}
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+	tr {
+		border-bottom: solid 1px rgba(0, 0, 0, 0.2);
+		border-top: solid 1px rgba(0, 0, 0, 0.2);
+	}
+	td {
+		padding: 12px;
+	}
+}
+
+.card {
+	box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 4px 12px -2px rgba(0, 0, 0, 0.2);
 }
 
 /*Icon Library*/
@@ -30,3 +48,4 @@ body {
 @import 'components/modal';
 @import 'components/pricing';
 @import 'components/cart';
+@import 'components/ripple';
