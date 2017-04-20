@@ -4904,6 +4904,9 @@ table {
   color: #FFF; }
 
 .highlight {
+  border: 1px solid #b9c1ca;
+  padding: 0.2rem;
+  border-radius: 0.3rem;
   background-color: #ebebeb;
   color: #d96383; }
 

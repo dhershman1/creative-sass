@@ -16,6 +16,9 @@
 }
 
 .highlight {
+	border: 1px solid $shade-150;
+	padding: 0.2rem;
+	border-radius: 0.3rem;
 	background-color: $shade-100;
 	color: $syntax;
 }
