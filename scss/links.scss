@@ -1,0 +1,26 @@
+nav.cl a,
+div.cl a {
+	position: relative;
+	display: inline-block;
+	margin: 1rem 1.5rem;
+	outline: none;
+	color: $primary-accent;
+	text-decoration: none;
+	letter-spacing: 1px;
+	font-weight: 400;
+	text-shadow: 0 0 1px $shade-900;
+	font-size: 1rem;
+	:hover {
+		outline: none;
+	}
+	&:focus {
+		outline: none;
+	}
+}
+
+@import 'link-animations/brackets';
+@import 'link-animations/lines';
+@import 'link-animations/border';
+@import 'link-animations/border-slide';
+@import 'link-animations/border-switch';
+@import 'link-animations/text-fill';

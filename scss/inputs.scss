@@ -1,0 +1,72 @@
+.ci {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  margin: 1rem;
+  max-width: 350px;
+  width: calc(100% - 2rem);
+  vertical-align: top;
+}
+
+.input__field {
+  position: relative;
+  display: block;
+  float: right;
+  padding: 0.8rem;
+  width: 60%;
+  border: none;
+  border-radius: 0;
+  background: $shade-100;
+  color: $shade-200;
+  font-weight: bold;
+  font-family: "Raleway", Helvetica, Arial, sans-serif;
+  -webkit-appearance: none;
+  /* for box shadows to show on iOS */
+  &:focus {
+    outline: none;
+  }
+}
+
+.input__label {
+  display: inline-block;
+  float: right;
+  padding: 0 1rem;
+  width: 40%;
+  color: $primary-accent;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.input__label-content {
+  position: relative;
+  display: block;
+  padding: 1.6rem 0;
+  width: 100%;
+}
+
+.graphic {
+  position: absolute;
+  top: 0;
+  left: 0;
+  fill: none;
+}
+
+.icon {
+  color: $shade-200;
+  font-size: 150%;
+}
+
+@import 'input-animations/underline';
+@import 'input-animations/split';
+@import 'input-animations/flash';
+@import 'input-animations/floattop';
+@import 'input-animations/lines';
+@import 'input-animations/move-top';
+@import 'input-animations/box-bottom';

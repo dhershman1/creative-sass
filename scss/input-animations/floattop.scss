@@ -1,0 +1,66 @@
+.ci-floattop {
+	overflow: hidden;
+	padding-top: 2rem;
+	.input__field {
+		width: 100%;
+		background: transparent;
+		opacity: 0;
+		padding: 0.35rem;
+		z-index: 100;
+		color: $spring-green;
+	}
+	.input__label {
+		width: 100%;
+		bottom: 0;
+		position: absolute;
+		pointer-events: none;
+		text-align: left;
+		color: $shade-200;
+		padding: 0 0.5rem;
+		&::before {
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 4rem;
+			top: 100%;
+			left: 0;
+			background: #fff;
+			border-top: 4px solid $shade-100;
+			-webkit-transform: translate3d(0, -3px, 0);
+			transform: translate3d(0, -3px, 0);
+			-webkit-transition: -webkit-transform 0.4s;
+			transition: transform 0.4s;
+			-webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+			transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+		}
+		.content {
+			padding: 0.5rem 0;
+			-webkit-transform-origin: 0% 100%;
+			transform-origin: 0% 100%;
+			-webkit-transition: -webkit-transform 0.4s, color 0.4s;
+			transition: transform 0.4s, color 0.4s;
+			-webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+			transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+		}
+	}
+	.input__field:focus,
+	&.input--filled .input__field {
+		cursor: text;
+		opacity: 1;
+		-webkit-transition: opacity 0s 0.4s;
+		transition: opacity 0s 0.4s;
+	}
+	.input__field:focus + .input__label::before,
+	&.input--filled .input__label::before {
+		-webkit-transition-delay: 0.05s;
+		transition-delay: 0.05s;
+		-webkit-transform: translate3d(0, -3.3rem, 0);
+		transform: translate3d(0, -3.3rem, 0);
+	}
+	.input__field:focus + .input__label .input__label-content,
+	&.input--filled .input__label-content {
+		color: $shade-200;
+		-webkit-transform: translate3d(0, -3.3rem, 0) scale3d(0.81, 0.81, 1);
+		transform: translate3d(0, -3.3rem, 0) scale3d(0.81, 0.81, 1);
+	}
+}

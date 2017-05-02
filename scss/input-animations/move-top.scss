@@ -1,0 +1,117 @@
+.ci-move-top {
+	padding-top: 1rem;
+	.input__field {
+		width: 100%;
+		padding: 0.8rem 0.5rem;
+		background: transparent;
+		border: 2px solid;
+		color: #b5b5b5;
+		-webkit-transition: border-color 0.25s;
+		transition: border-color 0.25s;
+	}
+	.input__label {
+		width: 100%;
+		position: absolute;
+		top: -1.2rem;
+		text-align: left;
+		overflow: hidden;
+		padding: 0;
+		pointer-events: none;
+		-webkit-transform: translate3d(0, 3rem, 0);
+		transform: translate3d(0, 3rem, 0);
+	}
+	.input__label-content {
+		padding: 0 1rem;
+		color: #b5b5b5;
+		&::after {
+			content: attr(data-content);
+			position: absolute;
+			top: -200%;
+			left: 0;
+			color: #da6484;
+			font-weight: 800;
+		}
+	}
+	.input__field:focus,
+	&.input--filled .input__field {
+		border-color: #da6484;
+	}
+	.input__field:focus + .input__label,
+	&.input--filled .input__label {
+		top: -0.3rem;
+		-webkit-animation: anim-move-1 0.25s forwards;
+		animation: anim-move-1 0.25s forwards;
+	}
+	.input__field:focus + .input__label .input__label-content,
+	&.input--filled .input__label-content {
+		-webkit-animation: anim-move-2 0.25s forwards ease-in;
+		animation: anim-move-2 0.25s forwards ease-in;
+	}
+}
+
+@-webkit-keyframes anim-move-1 {
+	0%, 70% {
+		-webkit-transform: translate3d(0, 3rem, 0);
+		transform: translate3d(0, 3rem, 0);
+	}
+
+	71%, 100% {
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+
+@-webkit-keyframes anim-move-2 {
+	0% {
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+
+	70%, 71% {
+		-webkit-transform: translate3d(0, 125%, 0);
+		transform: translate3d(0, 125%, 0);
+		opacity: 0;
+		-webkit-animation-timing-function: ease-out;
+	}
+
+	100% {
+		color: transparent;
+		-webkit-transform: translate3d(0, 200%, 0);
+		transform: translate3d(0, 200%, 0);
+	}
+}
+
+
+@keyframes anim-move-1 {
+	0%, 70% {
+		-webkit-transform: translate3d(0, 3rem, 0);
+		transform: translate3d(0, 3rem, 0);
+	}
+
+	71%, 100% {
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+
+@keyframes anim-move-2 {
+	0% {
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+
+	70%, 71% {
+		-webkit-transform: translate3d(0, 125%, 0);
+		transform: translate3d(0, 125%, 0);
+		opacity: 0;
+		-webkit-animation-timing-function: ease-out;
+	}
+
+	100% {
+		color: transparent;
+		-webkit-transform: translate3d(0, 200%, 0);
+		transform: translate3d(0, 200%, 0);
+	}
+}

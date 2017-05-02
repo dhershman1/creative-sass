@@ -1,0 +1,159 @@
+div.cs-underline {
+	background: transparent;
+	font-size: 1.8rem;
+	max-width: 400px;
+}
+
+@media screen and (max-width: 30rem) {
+	div.cs-underline {
+		font-size: 1.2rem;
+	}
+}
+
+.cs-underline {
+	> span {
+		padding: 0.5rem 3rem 0.5rem 0.5rem;
+		border-bottom: 3px solid #000;
+		border-color: inherit;
+		font-weight: bold;
+		&::after {
+			font-family: 'icomoon';
+			content: '\ea0f';
+			right: 0.25rem;
+			-webkit-transform: translate3d(0, -50%, 0) rotate3d(0, 0, 1, 45deg);
+			transform: translate3d(0, -50%, 0) rotate3d(0, 0, 1, 45deg);
+			-webkit-transition: -webkit-transform 0.5s;
+			transition: transform 0.5s;
+		}
+	}
+	&.cs-active > span::after {
+		-webkit-transform: translate3d(0, -50%, 0) rotate3d(0, 0, 1, 270deg);
+		transform: translate3d(0, -50%, 0) rotate3d(0, 0, 1, 270deg);
+	}
+	.cs-options {
+		background: #bbc7c8;
+		opacity: 0;
+		-webkit-transition: opacity 0.3s 0.4s, visibility 0s 0.7s;
+		transition: opacity 0.3s 0.4s, visibility 0s 0.7s;
+	}
+	&.cs-active .cs-options {
+		opacity: 1;
+		-webkit-transition: opacity 0.3s;
+		transition: opacity 0.3s;
+	}
+	ul span {
+		position: relative;
+		text-transform: uppercase;
+		font-size: 66%;
+		font-weight: 700;
+		letter-spacing: 1px;
+		padding: 1.2rem 0.8rem;
+		opacity: 0;
+		-webkit-transform: translate3d(100%, 0, 0);
+		transform: translate3d(100%, 0, 0);
+		-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+		transition: opacity 0.3s, transform 0.3s;
+	}
+}
+
+.cs-select {
+	ul span::after {
+		content: '';
+		opacity: 0;
+	}
+	.cs-selected span::after {
+		font-family: 'icomoon';
+		content: '\ea0f';
+		opacity: 1;
+		-webkit-transition: opacity 0.3s 0.7s;
+		transition: opacity 0.3s 0.7s;
+	}
+}
+
+.cs-underline {
+	ul span::before {
+		content: '';
+		position: absolute;
+		bottom: 1px;
+		left: 0;
+		height: 3px;
+		width: 100%;
+		background-color: #fff;
+		-webkit-transform: translate3d(200%, 0, 0);
+		transform: translate3d(200%, 0, 0);
+		-webkit-transition: -webkit-transform 0.3s;
+		transition: transform 0.3s;
+	}
+	&.cs-active ul span {
+		opacity: 1;
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+		&::before {
+			opacity: 1;
+			-webkit-transform: translate3d(0, 0, 0);
+			transform: translate3d(0, 0, 0);
+		}
+	}
+	li:nth-child(5) span, &.cs-active li:first-child span {
+		-webkit-transition-delay: 0s;
+		transition-delay: 0s;
+		&::before {
+			-webkit-transition-delay: 0s;
+			transition-delay: 0s;
+		}
+	}
+	li:nth-child(4) span, &.cs-active li:nth-child(2) span {
+		-webkit-transition-delay: 0.05s;
+		transition-delay: 0.05s;
+		&::before {
+			-webkit-transition-delay: 0.05s;
+			transition-delay: 0.05s;
+		}
+	}
+	li {
+		&:nth-child(3) span {
+			-webkit-transition-delay: 0.1s;
+			transition-delay: 0.1s;
+			&::before {
+				-webkit-transition-delay: 0.1s;
+				transition-delay: 0.1s;
+			}
+		}
+		&:nth-child(2) span {
+			-webkit-transition-delay: 0.15s;
+			transition-delay: 0.15s;
+			&::before {
+				-webkit-transition-delay: 0.15s;
+				transition-delay: 0.15s;
+			}
+		}
+	}
+	&.cs-active li:nth-child(4) span {
+		-webkit-transition-delay: 0.15s;
+		transition-delay: 0.15s;
+		&::before {
+			-webkit-transition-delay: 0.15s;
+			transition-delay: 0.15s;
+		}
+	}
+	li:first-child span, &.cs-active li:nth-child(5) span {
+		-webkit-transition-delay: 0.2s;
+		transition-delay: 0.2s;
+		&::before {
+			-webkit-transition-delay: 0.2s;
+			transition-delay: 0.2s;
+		}
+	}
+	.cs-options li {
+		span:hover, &.cs-focus span {
+			color: #566473;
+			background: transparent;
+		}
+	}
+	li.cs-selected span {
+		color: #566473;
+		background: transparent;
+	}
+}
+
+/* more itrems require more delay declarations */

@@ -1,0 +1,22 @@
+.cb-rswipe {
+	z-index: 1;
+	&:after {
+		width: 0;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background: $primary;
+	}
+	&:hover {
+		color: #FFF;
+		&:after {
+			width: 100%;
+		}
+	}
+	&:active {
+		color: #FFF;
+		&:after {
+			width: 100%;
+		}
+	}
+}
