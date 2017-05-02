@@ -1,3 +1,49 @@
+// All of these styles are used for the demo site
+.main-bg {
+	background-color: $primary;
+	color: #FFF;
+}
+
+.card-deck {
+	margin-top: 1rem;
+}
+
+.card-dark {
+	background-color: $shade-900;
+	p {
+		color: #FFF;
+	}
+}
+
+.btn-grey {
+	background-color: #888;
+}
+
+.btn-light {
+	box-shadow: 0 0 0;
+	color: rgba(0, 0, 0, 0.81);
+	&:hover {
+		box-shadow: 0 0 0;
+	}
+}
+
+.btn-dark {
+	background: #333;
+	color: #FFF;
+}
+
+.link-highlight {
+	padding: 0.2rem;
+	&:hover {
+		color: #FFF;
+		background-color: $primary;
+		box-shadow: 2px 2px 5px $shade-900;
+		-webkit-transition: all 0.3s;
+		-moz-transition: all 0.3s;
+		transition: all 0.3s;
+	}
+}
+
 .dummy-browser {
 	position: relative;
 	border-top: 30px solid rgba(181, 183, 188, 0.6);

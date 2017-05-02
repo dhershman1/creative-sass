@@ -6,3 +6,4 @@ server/cssmanifest.json
 server/jsmanifest.json
 tap.json
 tap.xml
+distro/*

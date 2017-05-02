@@ -6,15 +6,6 @@
 	display: none;
 }
 
-.card-deck {
-	margin-top: 1rem;
-}
-
-.main-bg {
-	background-color: $primary;
-	color: #FFF;
-}
-
 .highlight {
 	border: 1px solid $shade-150;
 	padding: 0.2rem;
@@ -23,45 +14,9 @@
 	color: $syntax;
 }
 
-.card-dark {
-	background-color: $shade-900;
-	p {
-		color: #FFF;
-	}
-}
-
 .round {
 	border-radius: 50%;
 	width: 36px;
 	height: 36px;
 	padding: 0;
-}
-
-.btn-grey {
-	background-color: #888;
-}
-
-.btn-light {
-	box-shadow: 0 0 0;
-	color: rgba(0, 0, 0, 0.81);
-	&:hover {
-		box-shadow: 0 0 0;
-	}
-}
-
-.btn-dark {
-	background: #333;
-	color: #FFF;
-}
-
-.link-highlight {
-	padding: 0.2rem;
-	&:hover {
-		color: #FFF;
-		background-color: $primary;
-		box-shadow: 2px 2px 5px $shade-900;
-		-webkit-transition: all 0.3s;
-		-moz-transition: all 0.3s;
-		transition: all 0.3s;
-	}
 }

@@ -17,6 +17,7 @@
     "sass": "sass-pack --theme=sass/default.scss --output=output",
     "init": "npm run sass | node index.js",
 		"start": "node index.js",
+		"distro": "sass-pack --theme=sass/distro.scss --output=distro",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
