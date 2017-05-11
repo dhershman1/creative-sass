@@ -1,6 +1,6 @@
 .cl-lines a {
-	padding: 12px 10px 10px;
-	color: #566473;
+	padding: 0.75rem 0.625rem 0.625rem;
+	color: $link-font-color;
 	text-shadow: none;
 	font-weight: 700;
 	&::before {
@@ -8,8 +8,8 @@
 		top: 100%;
 		left: 0;
 		width: 100%;
-		height: 3px;
-		background: #566473;
+		height: 0.2rem;
+		background: $link-main-bg;
 		content: '';
 		-webkit-transition: -webkit-transform 0.3s;
 		-moz-transition: -moz-transform 0.3s;
@@ -23,8 +23,8 @@
 		top: 100%;
 		left: 0;
 		width: 100%;
-		height: 3px;
-		background: #566473;
+		height: 0.2rem;
+		background: $link-main-bg;
 		content: '';
 		-webkit-transition: -webkit-transform 0.3s;
 		-moz-transition: -moz-transform 0.3s;

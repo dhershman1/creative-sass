@@ -1,18 +1,117 @@
 $primary: hsl(197, 61%, 47%);
 
+// Font Sizes
+$font-10: 3rem;
+$font-8: 2.4rem;
+$font-7: 2.2rem;
+$font-6: 2rem;
+$font-5: 1.7rem;
+$font-4: 1.5rem;
+$font-3: 1.3rem;
+$font-2: 1.1rem;
+$font-1: 1rem;
+$font-08: 0.8rem;
+$font-05: 0.5rem;
+
+// Basic Colors
 $primary-accent: hsl(213, 24%, 46%);
 $secondary-accent: hsl(184, 77%, 48%);
 
-$spring-green: hsl(147, 92%, 50%);
-$spring-green-opac: hsla(147, 92%, 50%, 0.6);
-
 $syntax: hsl(344, 61%, 62%);
-$flash: hsl(5, 68%, 77%);
 
 $shade-900: hsl(0, 0%, 29%);
 $shade-200: hsl(0, 0%, 61%);
 $shade-150: hsl(212, 14%, 76%);
 $shade-100: hsl(0, 0%, 92%);
 
-$overlay: hsla(0, 0%, 100%, 0.65);
+// Button Colors
+$btn-text: hsl(0, 0%, 100%);
+
+// Switch Colors
+$slider-circle: hsl(0, 0%, 100%);
+$slider-bg: hsl(0, 0%, 80%);
+
+// Selects
+$select-bg: hsl(0, 0%, 100%);
+$select-focus-bg: hsl(0, 0%, 87%);
+$select-options-bg: hsl(0, 0%, 100%);
+// Circle
+$circle-shadow: hsl(213, 24%, 46%);
+$circle-options-color: hsl(147, 92%, 50%);
+// Slide
+$slide-font-color: hsl(0, 0%, 100%);
+$slide-hover-select-font: hsl(359, 73%, 71%);
+// Underline
+$underline-bottom-border: hsl(0, 0%, 0%);
+$underline-main-bg: hsl(185, 11%, 76%);
+$underline-closed-bg: hsl(0, 0%, 100%);
+$underline-options-hover: hsl(211, 14%, 39%);
+
+// Ripple Colors
 $ripple-animation-visible-opacity: hsla(0, 0%, 100%, 0.65);
+$ripple-main-bg: hsla(0, 0%, 0%, 0.033);
+$ripple-light-bg: hsla(0, 0%, 100%, 0.15);
+$ripple-dark-bg: hsla(0, 0%, 0%, 0.075);
+
+// Modal Colors
+$overlay: hsla(0, 0%, 100%, 0.65);
+$modal-header: hsl(0, 0%, 100%);
+$modal-content-bg: hsl(0, 0%, 100%);
+
+// Cart Colors
+$cart-icon: hsl(0, 0%, 100%);
+$cart-text: hsl(0, 0%, 100%);
+$cart-table-text: hsl(211, 100%, 91%);
+
+// Input Colors
+$input-light-font: hsl(147, 92%, 50%);
+$input-font-color: hsl(213, 24%, 46%);
+$input-light-offset: hsl(344, 61%, 62%);
+$input-light-opac: hsla(147, 92%, 50%, 0.6);
+$input-dark-bg: hsl(0, 0%, 66%);
+$input-light-bg: hsl(0, 0%, 100%);
+$input-main-border: hsl(217, 5%, 48%);
+// Underline Animation Specific
+$input-underline-1: $primary;
+$input-underline-2: $input-light-font;
+$input-underline-3: $secondary-accent;
+
+// Link Colors
+$link-font-color: hsl(213, 24%, 46%);
+$link-light-font: hsl(147, 92%, 50%);
+$link-main-bg: hsl(213, 24%, 46%);
+
+// Pricing Colors
+$pricing-main-bg: hsl(216, 17%, 94%);
+$pricing-font: hsl(222, 7%, 64%);
+// Basic Card
+$basic-main-btn: hsl(227, 72%, 56%);
+$basic-main-btn-hover: hsl(227, 54%, 50%);
+$basic-main-btn-font: hsl(0, 0%, 100%);
+$basic-seperators: hsla(223, 8%, 58%, 0.18);
+$basic-feature-list: hsl(223, 8%, 58%);
+// Highlight Card
+$highlight-price-font: hsl(0, 0%, 100%);
+$highlight-main-font: hsl(222, 7%, 64%);
+$highlight-main-bg: hsl(270, 7%, 12%);
+$highlight-action: hsl(20, 84%, 61%);
+$highlight-price-bg-hover: hsl(0, 0%, 100%);
+$highlight-feature-list: hsl(222, 7%, 64%);
+// Simple Card
+$simple-main-bg: hsl(0, 0%, 100%);
+$simple-shadow: hsla(0, 0%, 0%, 0.05);
+$simple-title-color: hsl(150, 6%, 12%);
+$simple-icon-color: hsl(148, 6%, 57%);
+$simple-font-color: hsl(148, 52%, 63%);
+$simple-pricing-period-font: hsl(150, 20%, 84%);
+$simple-btn-font-color: hsl(0, 0%, 100%);
+$simple-btn-bg-hover: hsl(146, 9%, 34%);
+// Transparent
+$transparent-circle-1: hsl(41, 75%, 67%);
+$transparent-circle-2: hsl(26, 75%, 67%);
+$transparent-circle-3: hsl(117, 38%, 63%);
+$transparent-main-bg: hsl(117, 100%, 89%);
+$transparent-circle-3-font: hsl(0, 0%, 100%);
+$transparent-pricing-font-color: hsl(0, 0%, 100%);
+$transparent-action-btn: hsl(117, 38%, 63%);
+$transparent-action-btn-hover: hsl(147, 92%, 50%);

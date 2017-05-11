@@ -1,111 +1,111 @@
 /* Default custom select styles */
 
 div.cs-select {
-  display: inline-block;
-  vertical-align: middle;
-  position: relative;
-  text-align: left;
-  background: #fff;
-  z-index: 100;
-  width: 100%;
-  max-width: 500px;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  &:focus {
-    outline: none;
-    /* For better accessibility add a style for this in your skin */
-  }
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+	text-align: left;
+	background: $select-bg;
+	z-index: 100;
+	width: 100%;
+	max-width: 31.25rem;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	&:focus {
+		outline: none;
+		/* For better accessibility add a style for this in your skin */
+	}
 }
 
 .cs-select {
-  select {
-    display: none;
-  }
-  span {
-    display: block;
-    position: relative;
-    cursor: pointer;
-    padding: 1rem;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  > span {
-    padding-right: 3rem;
-    &::after {
-      speak: none;
-      position: absolute;
-      top: 50%;
-      -webkit-transform: translateY(-50%);
-      transform: translateY(-50%);
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-  }
-  .cs-selected span::after {
-    speak: none;
-    position: absolute;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    content: '\2713';
-    margin-left: 1rem;
-  }
-  > span::after {
-    content: '\25BE';
-    right: 1rem;
-  }
-  &.cs-active > span::after {
-    -webkit-transform: translateY(-50%) rotate(180deg);
-    transform: translateY(-50%) rotate(180deg);
-  }
+	select {
+		display: none;
+	}
+	span {
+		display: block;
+		position: relative;
+		cursor: pointer;
+		padding: 1rem;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	> span {
+		padding-right: 3rem;
+		&::after {
+			speak: none;
+			position: absolute;
+			top: 50%;
+			-webkit-transform: translateY(-50%);
+			transform: translateY(-50%);
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+		}
+	}
+	.cs-selected span::after {
+		speak: none;
+		position: absolute;
+		top: 50%;
+		-webkit-transform: translateY(-50%);
+		transform: translateY(-50%);
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		content: '\2713';
+		margin-left: 1rem;
+	}
+	> span::after {
+		content: '\25BE';
+		right: 1rem;
+	}
+	&.cs-active > span::after {
+		-webkit-transform: translateY(-50%) rotate(180deg);
+		transform: translateY(-50%) rotate(180deg);
+	}
 }
 
 /* Placeholder and selected option */
 
 div.cs-active {
-  z-index: 200;
+	z-index: 200;
 }
 
 /* Options */
 
 .cs-select {
-  .cs-options {
-    position: absolute;
-    overflow: hidden;
-    width: 100%;
-    background: #fff;
-    visibility: hidden;
-  }
-  &.cs-active .cs-options {
-    visibility: visible;
-  }
-  ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    span {
-      padding: 1rem;
-    }
-    li.cs-focus span {
-      background-color: #ddd;
-    }
-  }
-  li.cs-optgroup {
-    ul {
-      padding-left: 1rem;
-    }
-    > span {
-      cursor: default;
-    }
-  }
+	.cs-options {
+		position: absolute;
+		overflow: hidden;
+		width: 100%;
+		background: $select-options-bg;
+		visibility: hidden;
+	}
+	&.cs-active .cs-options {
+		visibility: visible;
+	}
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		span {
+			padding: 1rem;
+		}
+		li.cs-focus span {
+			background-color: $select-focus-bg;
+		}
+	}
+	li.cs-optgroup {
+		ul {
+			padding-left: 1rem;
+		}
+		> span {
+			cursor: default;
+		}
+	}
 }
 
 /* Optgroup and optgroup label */

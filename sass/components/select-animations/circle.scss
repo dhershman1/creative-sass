@@ -1,6 +1,6 @@
 div.cs-circle {
 	background: transparent;
-	font-size: 2rem;
+	font-size: $font-6;
 	font-weight: 700;
 	width: auto;
 	margin-top: 3rem;
@@ -9,12 +9,12 @@ div.cs-circle {
 .cs-circle {
 	> span {
 		background: transparent;
-		width: 100px;
-		height: 100px;
+		width: 6.25rem;
+		height: 6.25rem;
 		text-align: center;
 		padding: 0;
 		text-indent: 100%;
-		box-shadow: inset 0 0 0 5px $primary-accent;
+		box-shadow: inset 0 0 0 0.3rem $circle-shadow;
 		border-radius: 50%;
 		-webkit-transition: -webkit-transform 0.2s ease-out;
 		transition: transform 0.2s ease-out;
@@ -41,7 +41,7 @@ div.cs-circle {
 		width: 100%;
 		height: 100%;
 		top: 0;
-		color: $spring-green;
+		color: $circle-options-color;
 		background: transparent;
 		overflow: visible;
 		font-size: 50%;
@@ -113,36 +113,36 @@ div.cs-circle {
 	}
 	&.cs-active .cs-options li {
 		&:first-child {
-			-webkit-transform: translate3d(0, -160px, 0);
-			transform: translate3d(0, -160px, 0);
+			-webkit-transform: translate3d(0, -10rem, 0);
+			transform: translate3d(0, -10rem, 0);
 		}
 		&:nth-child(2) {
-			-webkit-transform: translate3d(113.14px, -113.14px, 0);
-			transform: translate3d(113.14px, -113.14px, 0);
+			-webkit-transform: translate3d(7rem, -7rem, 0);
+			transform: translate3d(7rem, -7rem, 0);
 		}
 		&:nth-child(3) {
-			-webkit-transform: translate3d(160px, 0, 0);
-			transform: translate3d(160px, 0, 0);
+			-webkit-transform: translate3d(10rem, 0, 0);
+			transform: translate3d(10rem, 0, 0);
 		}
 		&:nth-child(4) {
-			-webkit-transform: translate3d(113.14px, 113.14px, 0);
-			transform: translate3d(113.14px, 113.14px, 0);
+			-webkit-transform: translate3d(7rem, 7rem, 0);
+			transform: translate3d(7rem, 7rem, 0);
 		}
 		&:nth-child(5) {
-			-webkit-transform: translate3d(0, 160px, 0);
-			transform: translate3d(0, 160px, 0);
+			-webkit-transform: translate3d(0, 10rem, 0);
+			transform: translate3d(0, 10rem, 0);
 		}
 		&:nth-child(6) {
-			-webkit-transform: translate3d(-113.14px, 113.14px, 0);
-			transform: translate3d(-113.14px, 113.14px, 0);
+			-webkit-transform: translate3d(-7rem, 7rem, 0);
+			transform: translate3d(-7rem, 7rem, 0);
 		}
 		&:nth-child(7) {
-			-webkit-transform: translate3d(-160px, 0, 0);
-			transform: translate3d(-160px, 0, 0);
+			-webkit-transform: translate3d(-10rem, 0, 0);
+			transform: translate3d(-10rem, 0, 0);
 		}
 		&:nth-child(8) {
-			-webkit-transform: translate3d(-113.14px, -113.14px, 0);
-			transform: translate3d(-113.14px, -113.14px, 0);
+			-webkit-transform: translate3d(-7rem, -7rem, 0);
+			transform: translate3d(-7rem, -7rem, 0);
 		}
 	}
 	.cs-options li {
@@ -158,7 +158,7 @@ div.cs-circle {
 
 @media screen and (max-width: 30rem) {
 	.cs-circle > span {
-		width: 80px;
-		height: 80px;
+		width: 5rem;
+		height: 5rem;
 	}
 }

@@ -1,12 +1,12 @@
 .cl-border-switch a {
-	padding: 0 20px;
-	height: 45px;
-	line-height: 45px;
+	padding: 0 1.25rem;
+	height: 2.8rem;
+	line-height: 2.8rem;
 	&::before, &::after {
 		position: absolute;
-		width: 45px;
-		height: 2px;
-		background: $primary-accent;
+		width: 2.8rem;
+		height: 0.15rem;
+		background: $link-font-color;
 		content: '';
 		opacity: 0.2;
 		-webkit-transition: all 0.3s;

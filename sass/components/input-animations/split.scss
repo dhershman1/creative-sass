@@ -1,12 +1,12 @@
 .ci-split {
-	max-width: 320px;
-	margin-bottom: 3em;
+	max-width: 18rem;
+	margin-bottom: 3rem;
 	text-align: center;
 	.input__field {
 		font-size: 1.55rem;
 		width: 100%;
 		background: transparent;
-		color: #9196A1;
+		color: $input-font-color;
 		opacity: 0;
 		-webkit-transition: opacity 0.3s;
 		transition: opacity 0.3s;
@@ -15,7 +15,7 @@
 		position: absolute;
 		left: 0;
 		width: 100%;
-		color: $syntax;
+		color: $input-light-offset;
 		pointer-events: none;
 		&::before, &::after {
 			content: '';
@@ -24,7 +24,7 @@
 			left: 0;
 			width: 50%;
 			height: 100%;
-			border: 4px solid #747981;
+			border: 0.2rem solid $input-main-border;
 			-webkit-transition: -webkit-transform 0.3s;
 			transition: transform 0.3s;
 		}
@@ -68,14 +68,14 @@
 
 	51% {
 		opacity: 0;
-		-webkit-transform: translate3d(0, 3.7em, 0) scale3d(0.3, 0.3, 1);
-		transform: translate3d(0, 3.7em, 0) scale3d(0.3, 0.3, 1);
+		-webkit-transform: translate3d(0, 3.7rem, 0) scale3d(0.3, 0.3, 1);
+		transform: translate3d(0, 3.7rem, 0) scale3d(0.3, 0.3, 1);
 	}
 
 	100% {
 		opacity: 1;
-		-webkit-transform: translate3d(0, 3.7em, 0);
-		transform: translate3d(0, 3.7em, 0);
+		-webkit-transform: translate3d(0, 3.7rem, 0);
+		transform: translate3d(0, 3.7rem, 0);
 	}
 }
 
@@ -89,13 +89,13 @@
 
 	51% {
 		opacity: 0;
-		-webkit-transform: translate3d(0, 3.7em, 0) scale3d(0.3, 0.3, 1);
-		transform: translate3d(0, 3.7em, 0) scale3d(0.3, 0.3, 1);
+		-webkit-transform: translate3d(0, 3.7rem, 0) scale3d(0.3, 0.3, 1);
+		transform: translate3d(0, 3.7rem, 0) scale3d(0.3, 0.3, 1);
 	}
 
 	100% {
 		opacity: 1;
-		-webkit-transform: translate3d(0, 3.7em, 0);
-		transform: translate3d(0, 3.7em, 0);
+		-webkit-transform: translate3d(0, 3.7rem, 0);
+		transform: translate3d(0, 3.7rem, 0);
 	}
 }

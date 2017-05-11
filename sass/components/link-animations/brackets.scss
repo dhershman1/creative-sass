@@ -9,31 +9,31 @@
 	&::before {
 		margin-right: 1rem;
 		content: '[';
-		-webkit-transform: translateX(20px);
-		-moz-transform: translateX(20px);
-		transform: translateX(20px);
+		-webkit-transform: translateX(1.25rem);
+		-moz-transform: translateX(1.25rem);
+		transform: translateX(1.25rem);
 	}
 	&::after {
 		margin-left: 1rem;
 		content: ']';
-		-webkit-transform: translateX(-20px);
-		-moz-transform: translateX(-20px);
-		transform: translateX(-20px);
+		-webkit-transform: translateX(-1.25rem);
+		-moz-transform: translateX(-1.25rem);
+		transform: translateX(-1.25rem);
 	}
 	&:hover {
 		&::before, &::after {
 			opacity: 1;
-			-webkit-transform: translateX(0px);
-			-moz-transform: translateX(0px);
-			transform: translateX(0px);
+			-webkit-transform: translateX(0);
+			-moz-transform: translateX(0);
+			transform: translateX(0);
 		}
 	}
 	&:focus {
 		&::before, &::after {
 			opacity: 1;
-			-webkit-transform: translateX(0px);
-			-moz-transform: translateX(0px);
-			transform: translateX(0px);
+			-webkit-transform: translateX(0);
+			-moz-transform: translateX(0);
+			transform: translateX(0);
 		}
 	}
 }

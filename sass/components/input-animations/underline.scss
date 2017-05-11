@@ -5,7 +5,7 @@
 		padding: 1.5rem 0.15rem;
 		width: 100%;
 		background: transparent;
-		color: $primary-accent;
+		color: $input-font-color;
 	}
 	.input__label {
 		position: absolute;
@@ -25,8 +25,8 @@
 			top: 0;
 			left: 0;
 			width: 100%;
-			height: calc(100% - 10px);
-			border-bottom: 1px solid $shade-150;
+			height: calc(100% - 0.625rem);
+			border-bottom: 0.1rem solid $shade-150;
 		}
 		&::after {
 			content: '';
@@ -34,10 +34,10 @@
 			top: 0;
 			left: 0;
 			width: 100%;
-			height: calc(100% - 10px);
-			border-bottom: 1px solid $shade-150;
-			margin-top: 2px;
-			border-bottom: 4px solid red;
+			height: calc(100% - 0.625rem);
+			border-bottom: 0.1rem solid $shade-150;
+			margin-top: 0.15rem;
+			border-bottom: 0.25rem solid red;
 			-webkit-transform: translate3d(-100%, 0, 0);
 			transform: translate3d(-100%, 0, 0);
 			-webkit-transition: -webkit-transform 0.3s;
@@ -45,13 +45,13 @@
 		}
 	}
 	.input__label-color-1::after {
-		border-color: $primary;
+		border-color: $input-underline-1;
 	}
 	.input__label-color-2::after {
-		border-color: $spring-green;
+		border-color: $input-underline-2;
 	}
 	.input__label-color-3::after {
-		border-color: $secondary-accent;
+		border-color: $input-underline-3;
 	}
 	.input__field:focus + .input__label::after,
 	&.input--filled .input__label::after {

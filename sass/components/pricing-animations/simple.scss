@@ -4,49 +4,49 @@
 		padding: 2rem 3rem;
 		margin: 1rem;
 		color: #262b38;
-		background: #fff;
+		background: $simple-main-bg;
 		cursor: default;
 		overflow: hidden;
-		box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+		box-shadow: 0 0 1rem $simple-shadow;
 	}
 	.pricing__title {
-		font-size: 2rem;
+		font-size: $font-6;
 		margin: 0.5rem 0 0;
-		color: #1d211f;
+		color: $simple-title-color;
 	}
 	.icon {
 		display: inline-block;
 		min-width: 2rem;
-		color: #8A9790;
+		color: $simple-icon-color;
 		vertical-align: middle;
 	}
 	.pricing__price {
-		font-size: 5rem;
+		font-size: $font-10;
 		font-weight: 800;
-		color: #6ed19c;
+		color: $simple-font-color;
 		position: relative;
 		z-index: 100;
 	}
 	.pricing__currency {
-		font-size: 2.5rem;
+		font-size: $font-8;
 		vertical-align: super;
 	}
 	.pricing__period {
-		font-size: 0.25rem;
+		font-size: $font-2;
 		display: inline-block;
 		padding: 0 0 0 0.5rem;
-		color: #CEDED6;
+		color: $simple-pricing-period-font;
 	}
 	.pricing__sentence {
 		font-weight: bold;
 		margin: 0 0 1rem 0;
 		padding: 0 0 0.5rem;
-		color: #6ed19c;
+		color: $simple-font-color;
 	}
 	.pricing__feature-list {
-		font-size: 0.95rem;
+		font-size: $font-1;
 		margin: 0;
-		padding: 1.5em 0.5rem 2.5rem;
+		padding: 1.5rem 0.5rem 2.5rem;
 		list-style: none;
 	}
 	.pricing__feature {
@@ -56,13 +56,13 @@
 		font-weight: bold;
 		margin-top: auto;
 		padding: 1rem 2rem;
-		color: #fff;
-		border-radius: 5px;
-		background: #6ed19c;
+		color: $simple-btn-font-color;
+		border-radius: 0.3rem;
+		background: $simple-font-color;
 		-webkit-transition: background-color 0.3s;
 		transition: background-color 0.3s;
 		&:hover, &:focus {
-			background-color: #4F5F56;
+			background-color: $simple-btn-bg-hover;
 		}
 	}
 }
@@ -75,7 +75,7 @@
 		.pricing__item--featured {
 			z-index: 10;
 			margin: 0;
-			font-size: 1.15rem;
+			font-size: $font-2;
 		}
 	}
 }

@@ -4,8 +4,8 @@
 		width: 100%;
 		padding: 0.8rem 0.5rem;
 		background: transparent;
-		border: 2px solid;
-		color: #b5b5b5;
+		border: 0.15rem solid;
+		color: $input-font-color;
 		-webkit-transition: border-color 0.25s;
 		transition: border-color 0.25s;
 	}
@@ -22,19 +22,19 @@
 	}
 	.input__label-content {
 		padding: 0 1rem;
-		color: #b5b5b5;
+		color: $input-font-color;
 		&::after {
 			content: attr(data-content);
 			position: absolute;
 			top: -200%;
 			left: 0;
-			color: #da6484;
+			color: $input-light-offset;
 			font-weight: 800;
 		}
 	}
 	.input__field:focus,
 	&.input--filled .input__field {
-		border-color: #da6484;
+		border-color: $input-light-offset;
 	}
 	.input__field:focus + .input__label,
 	&.input--filled .input__label {

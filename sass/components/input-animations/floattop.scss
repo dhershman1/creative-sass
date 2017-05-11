@@ -7,7 +7,7 @@
 		opacity: 0;
 		padding: 0.35rem;
 		z-index: 100;
-		color: $spring-green;
+		color: $input-light-font;
 	}
 	.input__label {
 		width: 100%;
@@ -24,10 +24,10 @@
 			height: 4rem;
 			top: 100%;
 			left: 0;
-			background: #fff;
-			border-top: 4px solid $shade-100;
-			-webkit-transform: translate3d(0, -3px, 0);
-			transform: translate3d(0, -3px, 0);
+			background: $input-light-bg;
+			border-top: 0.25rem solid $shade-100;
+			-webkit-transform: translate3d(0, -0.2rem, 0);
+			transform: translate3d(0, -0.2rem, 0);
 			-webkit-transition: -webkit-transform 0.4s;
 			transition: transform 0.4s;
 			-webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);

@@ -11,14 +11,14 @@
 		transform: translateX(-50%) translateY(-50%) rotate(45deg);
 	}
 	&:hover {
-		color: #FFF;
+		color: $btn-text;
 		&:after {
 			height: 300%;
 			opacity: 1;
 		}
 	}
 	&:active {
-		color: #FFF;
+		color: $btn-text;
 		&:after {
 			height: 200%;
 			opacity: 1;

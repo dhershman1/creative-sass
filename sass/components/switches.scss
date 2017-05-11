@@ -15,7 +15,7 @@
 	right: 0;
 	bottom: 0;
 	width: 3.6rem;
-	background-color: #ccc;
+	background-color: $slider-bg;
 	-webkit-transition: .4s;
 	transition: .4s;
 	&:before {
@@ -23,9 +23,9 @@
 		content: "";
 		height: 1.5rem;
 		width: 1.5rem;
-		left: 4px;
-		bottom: 4px;
-		background-color: white;
+		left: 0.25rem;
+		bottom: 0.25rem;
+		background-color: $slider-circle;
 		-webkit-transition: .4s;
 		transition: .4s;
 	}
@@ -33,15 +33,15 @@
 
 input {
 	&:checked + .slider {
-		background-color: #2196F3;
+		background-color: $primary;
 	}
 	&:focus + .slider {
-		box-shadow: 0 0 1px #2196F3;
+		box-shadow: 0 0 0.1rem $primary;
 	}
 	&:checked + .slider:before {
-		-webkit-transform: translateX(26px);
-		-ms-transform: translateX(26px);
-		transform: translateX(26px);
+		-webkit-transform: translateX(1.625rem);
+		-ms-transform: translateX(1.625rem);
+		transform: translateX(1.625rem);
 	}
 }
 

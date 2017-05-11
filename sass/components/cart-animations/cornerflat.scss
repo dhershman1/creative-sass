@@ -4,8 +4,8 @@
 	right: 0;
 	z-index: 10;
 	display: block;
-	width: 67px;
-	height: 67px;
+	width: 4rem;
+	height: 4rem;
 	text-align: center;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -13,7 +13,7 @@
 		position: absolute;
 		top: 0;
 		left: 0;
-		color: #fff;
+		color: $cart-icon;
 		text-indent: 0;
 		&:hover {
 			color: $primary-accent;
@@ -44,7 +44,7 @@
 	.checkout__text {
 		display: block;
 		padding: 0.8rem 0 0;
-		color: #fff;
+		color: $cart-text;
 		font-weight: 400;
 		font-size: 1.25rem;
 	}
@@ -60,8 +60,8 @@
 		top: 0;
 		right: 0;
 		overflow: hidden;
-		max-width: 100vw;
-		width: 400px;
+		max-width: 24rem;
+		width: 24rem;
 		text-align: right;
 		pointer-events: none;
 	}
@@ -73,8 +73,8 @@
 		width: 100%;
 		height: 100%;
 		background: $primary;
-		-webkit-transform: translate3d(100%, -100%, 0) translate3d(-67px, 67px, 0);
-		transform: translate3d(100%, -100%, 0) translate3d(-67px, 67px, 0);
+		-webkit-transform: translate3d(100%, -100%, 0) translate3d(-4rem, 4rem, 0);
+		transform: translate3d(100%, -100%, 0) translate3d(-4rem, 4rem, 0);
 		-webkit-transition: -webkit-transform 0.6s cubic-bezier(0.2, 1, 0.3, 1);
 		transition: transform 0.6s cubic-bezier(0.2, 1, 0.3, 1);
 	}
@@ -95,8 +95,8 @@
 		color: transparent;
 		text-indent: 100%;
 		opacity: 0;
-		-webkit-transform: translate3d(50px, 0, 0);
-		transform: translate3d(50px, 0, 0);
+		-webkit-transform: translate3d(3.1rem, 0, 0);
+		transform: translate3d(3.1rem, 0, 0);
 		backface-visibility: hidden;
 		&:focus {
 			outline: none;
@@ -111,15 +111,15 @@
 	.checkout__summary {
 		margin: 2.5rem 0 0.75rem;
 		width: 100%;
-		color: #fff;
+		color: $cart-text;
 		text-align: left;
 		text-transform: uppercase;
-		letter-spacing: 1px;
-		font-size: 0.85rem;
+		letter-spacing: 0.1rem;
+		font-size: $font-08;
 		line-height: 1.5;
 		tr {
-			-webkit-transform: translate3d(250px, 0, 0);
-			transform: translate3d(250px, 0, 0);
+			-webkit-transform: translate3d(15.6rem, 0, 0);
+			transform: translate3d(15.6rem, 0, 0);
 		}
 	}
 	.checkout__summary {
@@ -129,7 +129,7 @@
 		}
 	}
 	.checkout__total {
-		color: #fff;
+		color: $cart-text;
 	}
 	.checkout__summary {
 		tbody {
@@ -149,7 +149,7 @@
 			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 		}
 		tbody td span {
-			color: #cfe6ff;
+			color: $cart-table-text;
 		}
 		th:last-child, td:last-child {
 			text-align: right;
@@ -160,13 +160,13 @@
 		margin-top: 1rem;
 		padding: 0.5rem 2rem;
 		border: none;
-		border-radius: 1px;
+		border-radius: 0.1rem;
 		background: $primary;
-		color: #fff;
+		color: $cart-text;
 		font-weight: 700;
 		opacity: 0;
-		-webkit-transform: translate3d(50px, 0, 0);
-		transform: translate3d(50px, 0, 0);
+		-webkit-transform: translate3d(3.1rem, 0, 0);
+		transform: translate3d(3.1rem, 0, 0);
 		&:hover {
 			background: $primary-accent;
 			.icon {
@@ -180,7 +180,7 @@
 	}
 	.checkout__option--silent {
 		background: none;
-		color: #FFF;
+		color: $cart-text;
 		font-weight: 500;
 		font-size: 0.75rem;
 		&:hover {

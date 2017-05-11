@@ -8,13 +8,13 @@
 		background: $primary;
 	}
 	&:hover {
-		color: #FFF;
+		color: $btn-text;
 		&:after {
 			width: 100%;
 		}
 	}
 	&:active {
-		color: #FFF;
+		color: $btn-text;
 		&:after {
 			width: 100%;
 		}

@@ -8,7 +8,7 @@
 		background: $primary;
 	}
 	&:hover, &:active {
-		color: #FFF;
+		color: $btn-text;
 	}
 	&:hover:after, &:active:after {
 		height: 100%;

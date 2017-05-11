@@ -6,9 +6,9 @@ div.cl a {
 	outline: none;
 	color: $primary-accent;
 	text-decoration: none;
-	letter-spacing: 1px;
+	letter-spacing: 0.1rem;
 	font-weight: 400;
-	text-shadow: 0 0 1px $shade-900;
+	text-shadow: 0 0 0.1rem $shade-900;
 	font-size: 1rem;
 	:hover {
 		outline: none;

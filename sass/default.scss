@@ -14,8 +14,8 @@
 body {
 	margin: 0;
 	font-family: 'Raleway';
-	background: #eee;
-	background: radial-gradient(#ddd, #ccc);
+	background: hsl(0, 0%, 92%);
+	background: radial-gradient(hsl(0, 0%, 87%), hsl(0, 0%, 80%));
 }
 
 table {

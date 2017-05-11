@@ -4,11 +4,11 @@
 		padding: 2rem;
 		cursor: default;
 		color: $shade-200;
-		border: 1px solid #CBFFC8;
+		border: 0.1rem solid $transparent-main-bg;
 		-webkit-transition: background-color 0.6s, color 0.3s;
 		transition: background-color 0.6s, color 0.3s;
 		.pricing__price {
-			color: #FFF;
+			color: $transparent-pricing-font-color;
 		}
 		&:nth-child(2) {
 			border-right: none;
@@ -16,37 +16,36 @@
 		}
 		&:hover {
 			color: $shade-900;
-			background: #CBFFC8;
+			background: $transparent-main-bg;
 		}
 	}
 	.pricing__title {
-		font-size: 2em;
+		font-size: $font-6;
 		width: 100%;
 		margin: 0;
 		padding: 0;
 	}
 	.pricing__price {
-		font-size: 1.45rem;
+		font-size: $font-4;
 		font-weight: bold;
-		line-height: 95px;
-		width: 100px;
-		height: 100px;
+		line-height: 6rem;
+		width: 6.25rem;
+		height: 6.25rem;
 		margin: 1.15rem auto 1rem;
 		border-radius: 50%;
-		background: $syntax;
 		-webkit-transition: color 0.3s, background 0.3s;
 		transition: color 0.3s, background 0.3s;
 	}
 	.pricing__item {
 		&:first-child .pricing__price {
-			background: #eac36e;
+			background: $transparent-circle-1;
 		}
 		&:nth-child(2) .pricing__price {
-			background: #eaa36e;
+			background: $transparent-circle-2;
 		}
 		&:hover .pricing__price {
-			color: #fff;
-			background: #82C57E;
+			color: $transparent-circle-3-font;
+			background: $transparent-circle-3;
 		}
 	}
 	.pricing__sentence {
@@ -64,11 +63,11 @@
 		padding: 0.75rem 2rem;
 		opacity: 0;
 		color: $shade-900;
-		background: #82C57E;
+		background: $transparent-action-btn;
 		-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
 		transition: transform 0.3s, opacity 0.3s;
-		-webkit-transform: translate3d(0, -15px, 0);
-		transform: translate3d(0, -15px, 0);
+		-webkit-transform: translate3d(0, -1rem, 0);
+		transform: translate3d(0, -1rem, 0);
 	}
 	.pricing__item:hover .pricing__action {
 		opacity: 1;
@@ -77,7 +76,7 @@
 	}
 	.pricing__action {
 		&:hover, &:focus {
-			background: $spring-green;
+			background: $transparent-action-btn-hover;
 		}
 	}
 }
@@ -88,7 +87,7 @@
 		width: 90%;
 		flex: none;
 		&:nth-child(2) {
-			border: 1px solid #fff;
+			border: 0.1rem solid $transparent-circle-3-font;
 		}
 	}
 }
