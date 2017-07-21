@@ -10,7 +10,6 @@ const port = process.env.PORT || 5000;
 app.use(mount('/dist', serve(`${__dirname}/dist`)));
 app.use(views({
 	defaultLayout: 'main',
-	contentTag: 'content',
 	paths: {
 		layouts: `${__dirname}/html/layout`,
 		views: `${__dirname}/html`,
