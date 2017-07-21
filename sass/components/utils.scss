@@ -12,6 +12,11 @@
 	border-radius: 0.3rem;
 	background-color: $shade-100;
 	color: $syntax;
+	@at-root {
+		ul {
+			line-height: 2rem;
+		}
+	}
 }
 
 .round {

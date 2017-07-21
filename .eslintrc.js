@@ -1,12 +1,12 @@
 module.exports = {
 	'parserOptions': {
-		'ecmaVersion': 5,
+		'ecmaVersion': 2017,
 		'sourceType': 'module'
 	},
 	'env': {
 		'browser': true,
 		'node': true,
-		'es6': false
+		'es6': true
 	},
 	'rules': {
 		// Possible Errors

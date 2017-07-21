@@ -1,57 +1,34 @@
-const hapi = require('hapi');
-const inert = require('inert');
-const vision = require('vision');
-const path = require('path');
-const handlebars = require('handlebars');
+const Koa = require('koa');
+const KoaRouter = require('koa-router');
+const mount = require('koa-mount');
+const serve = require('koa-static');
+const views = require('koa-hbs-renderer');
+const app = new Koa();
+const router = new KoaRouter();
 
-const server = new hapi.Server();
+app.use(mount('/dist', serve(`${__dirname}/dist`)));
+app.use(views({
+	defaultLayout: 'main',
+	contentTag: 'content',
+	paths: {
+		layouts: `${__dirname}/html/layout`,
+		views: `${__dirname}/html`,
+		helpers: `${__dirname}/html/helpers`
+	},
+	extension: 'html'
+}));
 
-server.connection({
-	port: process.env.PORT || 5000
-});
-
-server.register([inert, vision], err => {
-	if (err) {
-		throw err;
-	}
-
-	server.views({
-		engines: {
-			html: handlebars
-		},
-		relativeTo: __dirname,
-		path: 'html',
-		helpersPath: path.join('html', 'helpers'),
-		layout: path.join('layout', 'main')
+router
+	.redirect('/', '/home')
+	.get('/:page', async (ctx) => {
+		await ctx.render(ctx.params.page, {
+			pageName: ctx.params.page
+		});
 	});
 
-	server.route([{
-		method: 'GET',
-		path: '/dist/{path*}',
-		handler: {
-			directory: {
-				path: path.resolve('./output')
-			}
-		}
-	}, {
-		method: 'GET',
-		path: '/',
-		handler: (request, reply) => {
-			return reply.view('home', {pageName: 'home'});
-		}
-	}, {
-		method: 'GET',
-		path: '/{path*}',
-		handler: (request, reply) => {
-			return reply.view(request.params.path, {pageName: request.params.path});
-		}
-	}]);
+app
+	.use(router.routes())
+	.use(router.allowedMethods())
+	.listen(5000);
 
-	server.start((startErr) => {
-		if (startErr) {
-			throw startErr;
-		}
-
-		console.log(`Server running at: ${server.info.uri}`);
-	});
-});
+console.log('Listening on port 5000');

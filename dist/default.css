@@ -4579,16 +4579,14 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
     display: none !important; } }
 
 @font-face {
-  font-family: 'Raleway Light';
-  src: url(fonts/Raleway-Light.ttf); }
-
-@font-face {
-  font-family: 'Raleway';
-  src: url(fonts/Raleway-Regular.ttf); }
+  font-family: 'ralewayregular';
+  src: url("fonts/raleway-regular-webfont.woff2") format("woff2"), url("fonts/raleway-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
 
 body {
   margin: 0;
-  font-family: 'Raleway';
+  font-family: 'ralewayregular';
   background: #ebebeb;
   background: radial-gradient(#dedede, #cccccc); }
 
@@ -4938,6 +4936,8 @@ table {
   border-radius: 0.3rem;
   background-color: #ebebeb;
   color: #d96383; }
+  ul {
+    line-height: 2rem; }
 
 .round {
   border-radius: 50%;
@@ -4960,7 +4960,7 @@ table {
   background: none;
   cursor: pointer;
   display: inline-block;
-  margin: 0.65rem 0.5rem;
+  margin: 0.6rem 0.5rem;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
   font-weight: 700;
@@ -5291,7 +5291,7 @@ div.cl a {
   background: #ebebeb;
   color: #9c9c9c;
   font-weight: bold;
-  font-family: "Raleway", Helvetica, Arial, sans-serif;
+  font-family: "ralewayregular", Helvetica, Arial, sans-serif;
   -webkit-appearance: none;
   /* for box shadows to show on iOS */ }
   .input__field:focus {
