@@ -20,8 +20,8 @@
     "sass-pack": "1.5.1"
   },
   "scripts": {
-    "start": "sass-pack --source=sass/default.scss --output=dist --minify=compressed && node index.js",
-    "sass": "sass-pack --source=sass/default.scss --output=dist",
+    "start": "node index.js",
+    "sass": "sass-pack --source=sass/default.scss --output=dist --minify=compressed",
     "init": "npm run sass | node index.js",
     "distro": "sass-pack --source=sass/distro.scss --output=distro",
     "test": "echo \"Error: no test specified\" && exit 1"
