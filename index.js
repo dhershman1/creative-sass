@@ -5,6 +5,7 @@ const serve = require('koa-static');
 const views = require('koa-hbs-renderer');
 const app = new Koa();
 const router = new KoaRouter();
+const port = process.env.PORT || 5000;
 
 app.use(mount('/dist', serve(`${__dirname}/dist`)));
 app.use(views({
@@ -29,6 +30,4 @@ router
 app
 	.use(router.routes())
 	.use(router.allowedMethods())
-	.listen(5000);
-
-console.log('Listening on port 5000');
+	.listen(port);
