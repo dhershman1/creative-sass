@@ -16,13 +16,14 @@
     "koa-views": "6.0.2"
   },
   "devDependencies": {
+    "debug": "2.6.8",
     "eslint": "4.2.0",
     "sass-pack": "1.5.1"
   },
   "scripts": {
     "start": "node index.js",
     "sass": "sass-pack --source=sass/default.scss --output=dist --minify=compressed",
-    "init": "npm run sass | node index.js",
+    "init": "npm run sass | DEBUG=SC* node index.js",
     "distro": "sass-pack --source=sass/distro.scss --output=distro",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

@@ -1,40 +1,40 @@
 'use strict';
-function classReg( className ) {
-	return new RegExp('(^|\\s+)' + className + '(\\s+|$)');
-}
+var classReg = function (className) {
+	return new RegExp(('(^|\\s+)' + className + '(\\s+|$)'));
+};
 
-function classie() {
-	function hasClass(el, cl) {
+var classie = function () {
+	var hasClass = function (el, cl) {
 		if ('classList' in document.documentElement) {
-			return el.classList.contains( cl );
+			return el.classList.contains(cl);
 		}
 
-		return classReg(cl).test( el.className );
-	}
+		return classReg(cl).test(el.className);
+	};
 
-	function addClass(el, cl) {
+	var addClass = function (el, cl) {
 		if ('classList' in document.documentElement) {
 			el.classList.add(cl);
-		} else if ( !hasClass( el, cl ) ) {
-			el.className = el.className + ' ' + cl;
+		} else if (!hasClass(el, cl)) {
+			el.className = (el.className) + ' ' + cl;
 		}
-	}
+	};
 
-	function removeClass(el, cl) {
+	var removeClass = function (el, cl) {
 		if ('classList' in document.documentElement) {
 			el.classList.remove(cl);
-		} else if ( !hasClass( el, cl ) ) {
+		} else if (!hasClass(el, cl)) {
 			el.className = el.className.replace(classReg(cl), ' ');
 		}
-	}
+	};
 
-	function toggleClass(el, cl) {
+	var toggleClass = function (el, cl) {
 		var fn = hasClass(el, cl) ? removeClass : addClass;
 
 		fn(el, cl);
-	}
+	};
 
-	function findChild(el, cl) {
+	var findChild = function (el, cl) {
 		var i = 0;
 		var len = el.childNodes.length;
 
@@ -45,7 +45,7 @@ function classie() {
 		}
 
 		return null;
-	}
+	};
 
 	return {
 		hasClass: hasClass,
@@ -54,6 +54,6 @@ function classie() {
 		toggleClass: toggleClass,
 		findChild: findChild
 	};
-}
+};
 
 window.classie = classie();

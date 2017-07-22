@@ -2,11 +2,11 @@
 @import 'bootstrap/bootstrap-RT';
 
 @font-face {
-    font-family: 'ralewayregular';
-    src: url('fonts/raleway-regular-webfont.woff2') format('woff2'),
-         url('fonts/raleway-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+	font-family: 'ralewayregular';
+	src: url('fonts/raleway-regular-webfont.woff2') format('woff2'),
+			 url('fonts/raleway-regular-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
 
 }
 
@@ -31,6 +31,10 @@ table {
 
 .card {
 	box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 4px 12px -2px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+	padding-bottom: 1rem;
 }
 
 /*Icon Library*/

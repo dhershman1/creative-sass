@@ -1,7 +1,7 @@
 'use strict';
 var classie = window.classie;
 
-function extend(a, b) {
+var extend = function(a, b) {
 	var key = '';
 
 	for (key in b) {
@@ -11,9 +11,9 @@ function extend(a, b) {
 	}
 
 	return a;
-}
+};
 
-function hasParent(e, div) {
+var hasParent = function(e, div) {
 	var el = e.target || e.srcElement || e;
 
 	if (!e) return false;
@@ -22,9 +22,9 @@ function hasParent(e, div) {
 	}
 
 	return Boolean(el);
-}
+};
 
-function dropdownFx(el, options) {
+var dropdownFx = function(el, options) {
 	var defaults = {
 		newTab: true,
 		stickyPlaceholder: true,
@@ -42,19 +42,19 @@ function dropdownFx(el, options) {
 	var mainDiv = '';
 	var preSelCurr = -1;
 
-	function isOpen() {
+	var isOpen = function() {
 		return classie.hasClass(mainDiv, 'cs-active');
-	}
+	};
 
-	function removeFocus() {
+	var removeFocus = function() {
 		var focusEl = mainDiv.querySelector('li.cs-focus');
 
 		if (focusEl) {
 			classie.removeClass(focusEl, 'cs-focus');
 		}
-	}
+	};
 
-	function toggleSelect() {
+	var toggleSelect = function() {
 		removeFocus();
 
 		if (isOpen()) {
@@ -68,9 +68,9 @@ function dropdownFx(el, options) {
 			}
 			classie.addClass(mainDiv, 'cs-active');
 		}
-	}
+	};
 
-	function changeOption() {
+	var changeOption = function() {
 		var currOpt = '';
 		var oldOpt = '';
 
@@ -96,9 +96,9 @@ function dropdownFx(el, options) {
 			}
 		}
 		scriptOpts.onChange(el.value);
-	}
+	};
 
-	function navNext() {
+	var navNext = function() {
 		if (!isOpen()) {
 			toggleSelect();
 		}
@@ -107,9 +107,9 @@ function dropdownFx(el, options) {
 			removeFocus();
 			classie.addClass(optEls[currIndex], 'cs-focus');
 		}
-	}
+	};
 
-	function navPrev() {
+	var navPrev = function() {
 		if (!isOpen()) {
 			toggleSelect();
 		}
@@ -118,9 +118,9 @@ function dropdownFx(el, options) {
 			removeFocus();
 			classie.addClass(optEls[currIndex], 'cs-focus');
 		}
-	}
+	};
 
-	function keyboardEvents() {
+	var keyboardEvents = function() {
 		mainDiv.addEventListener('keydown', function(e) {
 			var keyCode = e.keyCode || e.which;
 
@@ -162,9 +162,9 @@ function dropdownFx(el, options) {
 					break;
 			}
 		});
-	}
+	};
 
-	function events() {
+	var events = function() {
 		placeholder.addEventListener('click', function() {
 			toggleSelect();
 		});
@@ -186,20 +186,16 @@ function dropdownFx(el, options) {
 		});
 
 		keyboardEvents();
-	}
+	};
 
-	function init() {
-		mainDiv = el.parentNode;
-		selectedOpt = el.querySelector('option[selected]');
-		placeholder = mainDiv.querySelector('.cs-placeholder');
-		currentSelected = mainDiv.querySelector('li.cs-selected');
-		optEls = [].slice.call(mainDiv.querySelectorAll('li[data-option]'));
-		optCount = optEls.length;
-		currIndex = optEls.indexOf(currentSelected) || -1;
-		events();
-	}
-
-	init();
-}
+	mainDiv = el.parentNode;
+	selectedOpt = el.querySelector('option[selected]');
+	placeholder = mainDiv.querySelector('.cs-placeholder');
+	currentSelected = mainDiv.querySelector('li.cs-selected');
+	optEls = [].slice.call(mainDiv.querySelectorAll('li[data-option]'));
+	optCount = optEls.length;
+	currIndex = optEls.indexOf(currentSelected) || -1;
+	events();
+};
 
 window.dropdownFx = dropdownFx;

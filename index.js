@@ -3,6 +3,7 @@ const KoaRouter = require('koa-router');
 const mount = require('koa-mount');
 const serve = require('koa-static');
 const views = require('koa-hbs-renderer');
+const debug = require('debug')('SC:Main');
 const app = new Koa();
 const router = new KoaRouter();
 const port = process.env.PORT || 5000;
@@ -30,3 +31,5 @@ app
 	.use(router.routes())
 	.use(router.allowedMethods())
 	.listen(port);
+
+debug('Server Started!');

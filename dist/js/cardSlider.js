@@ -4,7 +4,7 @@ var classie = window.classie;
 	var currCard = 0;
 	var allCards = [].slice.call(document.querySelectorAll('.card'));
 
-	function prevCard() {
+	var prevCard = function() {
 		if (currCard > 0) {
 			classie.addClass(allCards[currCard], 'hidden');
 
@@ -12,9 +12,9 @@ var classie = window.classie;
 
 			classie.removeClass(allCards[currCard], 'hidden');
 		}
-	}
+	};
 
-	function nextCard() {
+	var nextCard = function() {
 		if (currCard < allCards.length - 1) {
 			classie.addClass(allCards[currCard], 'hidden');
 
@@ -22,7 +22,7 @@ var classie = window.classie;
 
 			classie.removeClass(allCards[currCard], 'hidden');
 		}
-	}
+	};
 
 
 	[].slice.call(document.querySelectorAll('.cb.move-card')).forEach(function(btnEl) {
