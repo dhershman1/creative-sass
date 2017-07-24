@@ -1,13 +1,24 @@
-.switch {
+.csw-switch {
 	position: relative;
 	display: inline-block;
 	height: 2rem;
 	input {
 		display: none;
+		&:checked + .csw-slider {
+			background-color: $primary;
+		}
+		&:focus + .csw-slider {
+			box-shadow: 0 0 0.1rem $primary;
+		}
+		&:checked + .csw-slider:before {
+			-webkit-transform: translateX(1.625rem);
+			-ms-transform: translateX(1.625rem);
+			transform: translateX(1.625rem);
+		}
 	}
 }
 
-.slider {
+.csw-slider {
 	position: absolute;
 	cursor: pointer;
 	top: 0;
@@ -29,27 +40,10 @@
 		-webkit-transition: .4s;
 		transition: .4s;
 	}
-}
-
-input {
-	&:checked + .slider {
-		background-color: $primary;
-	}
-	&:focus + .slider {
-		box-shadow: 0 0 0.1rem $primary;
-	}
-	&:checked + .slider:before {
-		-webkit-transform: translateX(1.625rem);
-		-ms-transform: translateX(1.625rem);
-		transform: translateX(1.625rem);
-	}
-}
-
-/* Rounded sliders */
-
-.slider.round-slide {
-	border-radius: 2rem;
-	&:before {
-		border-radius: 50%;
+	&.round-slide {
+		border-radius: 2rem;
+		&:before {
+			border-radius: 50%;
+		}
 	}
 }

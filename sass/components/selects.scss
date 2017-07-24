@@ -2,7 +2,6 @@
 
 div.cs-select {
 	display: inline-block;
-	vertical-align: middle;
 	position: relative;
 	text-align: left;
 	background: $select-bg;
@@ -29,13 +28,12 @@ div.cs-select {
 		display: block;
 		position: relative;
 		cursor: pointer;
-		padding: 1rem;
+		padding: 1.5rem;
 		white-space: nowrap;
 		overflow: hidden;
 		text-overflow: ellipsis;
 	}
 	> span {
-		padding-right: 3rem;
 		&::after {
 			speak: none;
 			position: absolute;
