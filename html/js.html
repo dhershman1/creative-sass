@@ -101,27 +101,27 @@ function onInputBlur(ev) {
 		<p class="card-text">All it takes is adding a single class using your favorite framework, or DOM manipulation tool.</p>
 		<p class="card-text">we are using dropdownFx.js with the following js below for these animations</p>
 		<p class="card-text">We utilize this by using some javascript to apply our <span class="highlight">cs-active</span> class</p>
-<pre><code class="javascript">function init() {
+<pre><code class="javascript">
 	// Our modal overlay
 	var overlay = document.querySelector('.cm-overlay');
 
 	[].slice.call( document.querySelectorAll('.cm-trigger')).forEach( function(el) {
-		// Our modal element
-		var modal = document.querySelector( '#' + el.getAttribute('data-modal')),
-			close = modal.querySelector('.cm-close');
-		// Hide our modal
-		function removeModal(hasPerspective) {
+
+		var modal = document.querySelector( '#' + el.getAttribute('data-modal'));
+		var close = modal.querySelector('.cm-close');
+
+		var removeModal = function(hasPerspective) {
 			classie.removeClass(modal, 'cm-show');
 
 			if (hasPerspective) {
 				classie.removeClass(document.documentElement, 'cm-perspective');
 			}
-		}
-		// Remove modal handling
-		function removeModalHandler() {
+		};
+
+		var removeModalHandler = function() {
 			removeModal(classie.hasClass(el, 'cm-setperspective'));
-		}
-		// Listen for a triggering click for our modal
+		};
+
 		el.addEventListener('click', function() {
 			classie.addClass(modal, 'cm-show');
 			overlay.removeEventListener('click', removeModalHandler);
@@ -133,17 +133,13 @@ function onInputBlur(ev) {
 				}, 25);
 			}
 		});
-		// Add closing event listeners for the modal buttons/overlay
+
 		close.addEventListener('click', function(ev) {
 			ev.stopPropagation();
 			removeModalHandler();
 		});
 
 	});
-
-}
-
-init();
 </code></pre>
 	</div>
 </div>

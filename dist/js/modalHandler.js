@@ -6,8 +6,8 @@ var classie = window.classie;
 
 	[].slice.call( document.querySelectorAll('.cm-trigger')).forEach( function(el) {
 
-		var modal = document.querySelector( '#' + el.getAttribute('data-modal')),
-			close = modal.querySelector('.cm-close');
+		var modal = document.querySelector( '#' + el.getAttribute('data-modal'));
+		var close = modal.querySelector('.cm-close');
 
 		var removeModal = function(hasPerspective) {
 			classie.removeClass(modal, 'cm-show');
