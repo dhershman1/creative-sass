@@ -23,7 +23,7 @@
   "scripts": {
     "start": "node index.js",
     "sass": "sass-pack --source=sass/default.scss --output=dist --minify=compressed",
-    "init": "npm run sass && DEBUG=SC* node index.js",
+    "init": "npm run sass && set DEBUG=SC* && node index.js",
     "distro": "sass-pack --source=sass/distro.scss --output=distro",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
