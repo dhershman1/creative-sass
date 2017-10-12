@@ -4,20 +4,20 @@
   stroke-width: 4;
   fill: none;
   
-  .internal-circle,
-  .external-circle {
+  &__internal,
+  &__external {
     stroke: rgb(76, 147, 175);
     stroke-dashoffset: 0;
     transform-origin: center;
   }
   
-  .internal-circle {
+  &__internal {
     stroke-dasharray: 187;
     animation: internal 1s ease-in-out infinite;
     opacity: .4;
   }
   
-  .external-circle {
+  &__external {
     stroke-dasharray: 312;
     animation: external 1s linear infinite;
     opacity: .9;
