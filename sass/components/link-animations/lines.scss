@@ -1,58 +1,60 @@
-.cl-lines a {
-	padding: 0.75rem 0.625rem 0.625rem;
-	color: $link-font-color;
-	text-shadow: none;
-	font-weight: 700;
-	&::before {
-		position: absolute;
-		top: 100%;
-		left: 0;
-		width: 100%;
-		height: 0.2rem;
-		background: $link-main-bg;
-		content: '';
-		-webkit-transition: -webkit-transform 0.3s;
-		-moz-transition: -moz-transform 0.3s;
-		transition: transform 0.3s;
-		-webkit-transform: scale(0.85);
-		-moz-transform: scale(0.85);
-		transform: scale(0.85);
-	}
-	&::after {
-		position: absolute;
-		top: 100%;
-		left: 0;
-		width: 100%;
-		height: 0.2rem;
-		background: $link-main-bg;
-		content: '';
-		-webkit-transition: -webkit-transform 0.3s;
-		-moz-transition: -moz-transform 0.3s;
-		transition: transform 0.3s;
-		-webkit-transform: scale(0.85);
-		-moz-transform: scale(0.85);
-		transform: scale(0.85);
-		opacity: 0;
-		-webkit-transition: top 0.3s, opacity 0.3s, -webkit-transform 0.3s;
-		-moz-transition: top 0.3s, opacity 0.3s, -moz-transform 0.3s;
-		transition: top 0.3s, opacity 0.3s, transform 0.3s;
-	}
-	&:hover {
-		&::before, &::after {
-			-webkit-transform: scale(1);
-			-moz-transform: scale(1);
-			transform: scale(1);
+.cl {
+	&__lines {
+		padding: 0.75rem 0.625rem 0.625rem;
+		color: $link-font-color;
+		text-shadow: none;
+		font-weight: 700;
+		&::before {
+			position: absolute;
+			top: 100%;
+			left: 0;
+			width: 100%;
+			height: 0.2rem;
+			background: $link-main-bg;
+			content: '';
+			-webkit-transition: -webkit-transform 0.3s;
+			-moz-transition: -moz-transform 0.3s;
+			transition: transform 0.3s;
+			-webkit-transform: scale(0.85);
+			-moz-transform: scale(0.85);
+			transform: scale(0.85);
 		}
-	}
-	&:focus {
-		&::before, &::after {
-			-webkit-transform: scale(1);
-			-moz-transform: scale(1);
-			transform: scale(1);
+		&::after {
+			position: absolute;
+			top: 100%;
+			left: 0;
+			width: 100%;
+			height: 0.2rem;
+			background: $link-main-bg;
+			content: '';
+			-webkit-transition: -webkit-transform 0.3s;
+			-moz-transition: -moz-transform 0.3s;
+			transition: transform 0.3s;
+			-webkit-transform: scale(0.85);
+			-moz-transform: scale(0.85);
+			transform: scale(0.85);
+			opacity: 0;
+			-webkit-transition: top 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+			-moz-transition: top 0.3s, opacity 0.3s, -moz-transform 0.3s;
+			transition: top 0.3s, opacity 0.3s, transform 0.3s;
 		}
-	}
-	&:hover::after, &:focus::after {
-		top: 0%;
-		opacity: 1;
+		&:hover {
+			&::before, &::after {
+				-webkit-transform: scale(1);
+				-moz-transform: scale(1);
+				transform: scale(1);
+			}
+		}
+		&:focus {
+			&::before, &::after {
+				-webkit-transform: scale(1);
+				-moz-transform: scale(1);
+				transform: scale(1);
+			}
+		}
+		&:hover::after, &:focus::after {
+			top: 0%;
+			opacity: 1;
+		}
 	}
 }

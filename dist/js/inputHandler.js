@@ -7,18 +7,18 @@ var trim = function(val) {
 };
 
 var onInputFocus = function(ev) {
-	classie.addClass(ev.target.parentNode, 'input--filled');
+	classie.addClass(ev.target.parentNode, 'ci--filled');
 };
 
 var onInputBlur = function(ev) {
 	if (ev.target.value.trim() === '') {
-		classie.removeClass(ev.target.parentNode, 'input--filled');
+		classie.removeClass(ev.target.parentNode, 'ci--filled');
 	}
 };
 
-[].slice.call(document.querySelectorAll('input.input__field')).forEach(function(inputEl) {
+[].slice.call(document.querySelectorAll('input.ci__field')).forEach(function(inputEl) {
 	if (trim(inputEl.value) !== '') {
-		classie.addClass(inputEl.parentNode, 'input--filled');
+		classie.addClass(inputEl.parentNode, 'ci--filled');
 	}
 
 	inputEl.addEventListener('focus', onInputFocus);

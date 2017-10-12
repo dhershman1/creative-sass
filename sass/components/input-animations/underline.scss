@@ -1,67 +1,93 @@
-.ci-underline {
-	overflow: hidden;
-	.input__field {
-		margin-top: 1rem;
-		padding: 1.5rem 0.15rem;
-		width: 100%;
-		background: transparent;
-		color: $input-font-color;
-	}
-	.input__label {
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		padding: 0 0.25rem;
-		width: 100%;
-		height: calc(100% - 1rem);
-		text-align: left;
-		pointer-events: none;
-		.content {
-			position: absolute;
+.ci {
+	&--underline {
+		overflow: hidden;
+		&.ci--filled {
+				.ci__label {
+					&::after {
+						-webkit-transform: translate3d(0, 0, 0);
+						transform: translate3d(0, 0, 0);
+					}
+					.ci__label__content {
+						-webkit-animation: anim-1 0.3s forwards;
+						animation: anim-1 0.3s forwards;
+					}
+				}
+			}
+		.ci {
+			&__field {
+				margin-top: 1rem;
+				padding: 1.5rem 0.15rem;
+				width: 100%;
+				background: transparent;
+				color: $input-font-color;
+				&:focus {
+					+.ci__label {
+						.ci__label__content {
+							-webkit-animation: anim-1 0.3s forwards;
+							animation: anim-1 0.3s forwards;
+						}
+						&::after {
+							-webkit-transform: translate3d(0, 0, 0);
+							transform: translate3d(0, 0, 0);
+						}
+					}
+				}
+			}
+			&__label {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				padding: 0 0.25rem;
+				width: 100%;
+				height: calc(100% - 1rem);
+				text-align: left;
+				pointer-events: none;
+				&__content {
+					position: absolute;
+					display: block;
+					padding: 1.6rem 0;
+					width: 100%;
+				}
+				&::before {
+					content: '';
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: calc(100% - 0.625rem);
+					border-bottom: 0.1rem solid $shade-150;
+				}
+				&::after {
+					content: '';
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: calc(100% - 0.625rem);
+					border-bottom: 0.25rem solid $shade-150;
+					margin-top: 0.15rem;
+					-webkit-transform: translate3d(-100%, 0, 0);
+					transform: translate3d(-100%, 0, 0);
+					-webkit-transition: -webkit-transform 0.3s;
+					transition: transform 0.3s;
+				}
+				&--color1 {
+					&::after {
+						border-color: $input-underline-1;
+					}
+				}
+				&--color2 {
+					&::after {
+						border-color: $input-underline-2;
+					}
+				}
+				&--color3 {
+					&::after {
+						border-color: $input-underline-3;
+					}
+				}
+			}
 		}
-		&::before {
-			content: '';
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: calc(100% - 0.625rem);
-			border-bottom: 0.1rem solid $shade-150;
-		}
-		&::after {
-			content: '';
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: calc(100% - 0.625rem);
-			border-bottom: 0.1rem solid $shade-150;
-			margin-top: 0.15rem;
-			border-bottom: 0.25rem solid red;
-			-webkit-transform: translate3d(-100%, 0, 0);
-			transform: translate3d(-100%, 0, 0);
-			-webkit-transition: -webkit-transform 0.3s;
-			transition: transform 0.3s;
-		}
-	}
-	.input__label-color-1::after {
-		border-color: $input-underline-1;
-	}
-	.input__label-color-2::after {
-		border-color: $input-underline-2;
-	}
-	.input__label-color-3::after {
-		border-color: $input-underline-3;
-	}
-	.input__field:focus + .input__label::after,
-	&.input--filled .input__label::after {
-		-webkit-transform: translate3d(0, 0, 0);
-		transform: translate3d(0, 0, 0);
-	}
-	.input__field:focus + .input__label .input__label-content,
-	&.input--filled .input__label .content {
-		-webkit-animation: anim-1 0.3s forwards;
-		animation: anim-1 0.3s forwards;
 	}
 }
 

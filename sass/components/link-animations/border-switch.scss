@@ -1,59 +1,61 @@
-.cl-border-switch a {
-	padding: 0 1.25rem;
-	height: 2.8rem;
-	line-height: 2.8rem;
-	&::before, &::after {
-		position: absolute;
-		width: 2.8rem;
-		height: 0.15rem;
-		background: $link-font-color;
-		content: '';
-		opacity: 0.2;
-		-webkit-transition: all 0.3s;
-		-moz-transition: all 0.3s;
-		transition: all 0.3s;
-		pointer-events: none;
-	}
-	&::before {
-		top: 0;
-		left: 0;
-		-webkit-transform: rotate(90deg);
-		-moz-transform: rotate(90deg);
-		transform: rotate(90deg);
-		-webkit-transform-origin: 0 0;
-		-moz-transform-origin: 0 0;
-		transform-origin: 0 0;
-	}
-	&::after {
-		right: 0;
-		bottom: 0;
-		-webkit-transform: rotate(90deg);
-		-moz-transform: rotate(90deg);
-		transform: rotate(90deg);
-		-webkit-transform-origin: 100% 0;
-		-moz-transform-origin: 100% 0;
-		transform-origin: 100% 0;
-	}
-	&:hover {
+.cl {
+	&__border-switch {
+		padding: 0 1.25rem;
+		height: 2.8rem;
+		line-height: 2.8rem;
 		&::before, &::after {
-			opacity: 1;
+			position: absolute;
+			width: 2.8rem;
+			height: 0.15rem;
+			background: $link-font-color;
+			content: '';
+			opacity: 0.2;
+			-webkit-transition: all 0.3s;
+			-moz-transition: all 0.3s;
+			transition: all 0.3s;
+			pointer-events: none;
 		}
-	}
-	&:focus {
-		&::before, &::after {
-			opacity: 1;
+		&::before {
+			top: 0;
+			left: 0;
+			-webkit-transform: rotate(90deg);
+			-moz-transform: rotate(90deg);
+			transform: rotate(90deg);
+			-webkit-transform-origin: 0 0;
+			-moz-transform-origin: 0 0;
+			transform-origin: 0 0;
 		}
-	}
-	&:hover::before, &:focus::before {
-		left: 50%;
-		-webkit-transform: rotate(0deg) translateX(-50%);
-		-moz-transform: rotate(0deg) translateX(-50%);
-		transform: rotate(0deg) translateX(-50%);
-	}
-	&:hover::after, &:focus::after {
-		right: 50%;
-		-webkit-transform: rotate(0deg) translateX(50%);
-		-moz-transform: rotate(0deg) translateX(50%);
-		transform: rotate(0deg) translateX(50%);
+		&::after {
+			right: 0;
+			bottom: 0;
+			-webkit-transform: rotate(90deg);
+			-moz-transform: rotate(90deg);
+			transform: rotate(90deg);
+			-webkit-transform-origin: 100% 0;
+			-moz-transform-origin: 100% 0;
+			transform-origin: 100% 0;
+		}
+		&:hover {
+			&::before, &::after {
+				opacity: 1;
+			}
+		}
+		&:focus {
+			&::before, &::after {
+				opacity: 1;
+			}
+		}
+		&:hover::before, &:focus::before {
+			left: 50%;
+			-webkit-transform: rotate(0deg) translateX(-50%);
+			-moz-transform: rotate(0deg) translateX(-50%);
+			transform: rotate(0deg) translateX(-50%);
+		}
+		&:hover::after, &:focus::after {
+			right: 50%;
+			-webkit-transform: rotate(0deg) translateX(50%);
+			-moz-transform: rotate(0deg) translateX(50%);
+			transform: rotate(0deg) translateX(50%);
+		}
 	}
 }

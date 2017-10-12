@@ -1,22 +1,24 @@
-.cb-rswipe {
-	z-index: 1;
-	&:after {
-		width: 0;
-		height: 100%;
-		top: 0;
-		left: 0;
-		background: $primary;
-	}
-	&:hover {
-		color: $btn-text;
+.cb {
+	&__rswipe {
+		z-index: 1;
 		&:after {
-			width: 100%;
+			width: 0;
+			height: 100%;
+			top: 0;
+			left: 0;
+			background: $primary;
 		}
-	}
-	&:active {
-		color: $btn-text;
-		&:after {
-			width: 100%;
+		&:hover {
+			color: $btn-text;
+			&:after {
+				width: 100%;
+			}
+		}
+		&:active {
+			color: $btn-text;
+			&:after {
+				width: 100%;
+			}
 		}
 	}
 }

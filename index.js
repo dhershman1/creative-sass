@@ -6,7 +6,7 @@ const views = require('koa-hbs-renderer');
 const debug = require('debug')('SC:Main');
 const app = new Koa();
 const router = new KoaRouter();
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 3000;
 
 app.use(mount('/dist', serve(`${__dirname}/dist`)));
 app.use(views({
@@ -32,4 +32,4 @@ app
 	.use(router.allowedMethods())
 	.listen(port);
 
-debug('Server Started!');
+debug(`Server Started on port ${port}`);

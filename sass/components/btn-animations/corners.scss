@@ -1,27 +1,29 @@
-.cb-corners {
-	overflow: hidden;
-	z-index: 1;
-	&:after {
-		width: 100%;
-		height: 0;
-		top: 50%;
-		left: 50%;
-		background: $primary;
-		opacity: 0;
-		transform: translateX(-50%) translateY(-50%) rotate(45deg);
-	}
-	&:hover {
-		color: $btn-text;
+.cb {
+	&__corners {
+		overflow: hidden;
+		z-index: 1;
 		&:after {
-			height: 300%;
-			opacity: 1;
+			width: 100%;
+			height: 0;
+			top: 50%;
+			left: 50%;
+			background: $primary;
+			opacity: 0;
+			transform: translateX(-50%) translateY(-50%) rotate(45deg);
 		}
-	}
-	&:active {
-		color: $btn-text;
-		&:after {
-			height: 200%;
-			opacity: 1;
+		&:hover {
+			color: $btn-text;
+			&:after {
+				height: 300%;
+				opacity: 1;
+			}
+		}
+		&:active {
+			color: $btn-text;
+			&:after {
+				height: 200%;
+				opacity: 1;
+			}
 		}
 	}
 }

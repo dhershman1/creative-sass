@@ -1,23 +1,25 @@
-.cl-text-fill a {
-	padding: 0.625rem 0;
-	border-top: 0.15rem solid $primary;
-	color: $primary;
-	text-shadow: none;
-	&::before {
-		position: absolute;
-		top: 0;
-		left: 0;
-		overflow: hidden;
+.cl {
+	&__text-fill {
 		padding: 0.625rem 0;
-		max-width: 0;
-		border-bottom: 0.15rem solid $link-main-bg;
-		color: $link-font-color;
-		content: attr(data-hover);
-		-webkit-transition: max-width 0.5s;
-		-moz-transition: max-width 0.5s;
-		transition: max-width 0.5s;
-	}
-	&:hover::before, &:focus::before {
-		max-width: 100%;
+		border-top: 0.15rem solid $primary;
+		color: $primary;
+		text-shadow: none;
+		&::before {
+			position: absolute;
+			top: 0;
+			left: 0;
+			overflow: hidden;
+			padding: 0.625rem 0;
+			max-width: 0;
+			border-bottom: 0.15rem solid $link-main-bg;
+			color: $link-font-color;
+			content: attr(data-hover);
+			-webkit-transition: max-width 0.5s;
+			-moz-transition: max-width 0.5s;
+			transition: max-width 0.5s;
+		}
+		&:hover::before, &:focus::before {
+			max-width: 100%;
+		}
 	}
 }
