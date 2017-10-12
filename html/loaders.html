@@ -5,12 +5,22 @@
 		<p class="card-text">
 			Create a responsive loading animation
 		</p>
-		<p class="card-text">Example:</p>
+		<p class="card-text">Examples:</p>
 		<pre><code class="html">
 &lt;div class=&quot;cs-loader&quot;&gt;
-  &lt;div class=&quot;{LOADER-TYPE} {LOADER-PIECE}&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;squares square-1&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;squares square-2&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;squares square-3&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;squares square-4&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;
-		</pre></code>
+
+&lt;div class=&quot;cs-loader&quot;&gt;
+  &lt;svg class=&quot;circles&quot;&gt;
+    &lt;circle class=&quot;internal-circle&quot;&gt; cx=&quot;60&quot; cy=&quot;60&quot; r=&quot;30&quot;&lt;/circle&gt;
+    &lt;circle class=&quot;external-circle&quot;&gt; cx=&quot;60&quot; cy=&quot;60&quot; r=&quot;50&quot;&lt;/circle&gt;
+  &lt;/svg&gt;
+&lt;/div&gt;
+		</code></pre>
 	</div>
 </div>
 
@@ -29,6 +39,23 @@
 			</div>
 			<p class="card-text">Type Class: <span class="highlight">.squares</span></p>
 			<p class="card-text">Piece Class: <span class="highlight">.square-1</span></p>
+		</div>
+	</div>
+	<div class="card">
+		<h3 class="card-header">Circle</h3>
+		<div class="card-block">
+			<p class="card-text">Circle loader animation</p>
+			<div class="mb-3">
+				<div class="cs-loader">
+					<svg class="circles" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+						<circle class="internal-circle" cx="60" cy="60" r="30"></circle>
+						<circle class="external-circle" cx="60" cy="60" r="50"></circle>
+					</svg>
+				</div>
+			</div>
+			<p class="card-text">Wrapper Class: <span class="highlight">.circles</span></p>
+			<p class="card-text">Internal Class: <span class="highlight">.internal-circle</span></p>
+			<p class="card-text">External Class: <span class="highlight">.external-circle</span></p>
 		</div>
 	</div>
 </div>

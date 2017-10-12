@@ -1,0 +1,98 @@
+.ci--box-bottom {
+	overflow: hidden;
+	.input {
+		&--filled {
+			.input__field {
+				opacity: 1;
+				-webkit-transition: opacity 0s 0.2s;
+				transition: opacity 0s 0.2s;
+				-webkit-transition-timing-function: cubic-bezier(0, 0.25, 0.5, 1);
+				transition-timing-function: cubic-bezier(0, 0.25, 0.5, 1);
+			}
+			.input__label {
+				&::before {
+					-webkit-transform: translate3d(0, 0, 0);
+					transform: translate3d(0, 0, 0);
+				}
+				&::after {
+					opacity: 0;
+				}
+				&__content {
+					-webkit-transform: translate3d(0, 2.1rem, 0) scale3d(0.65, 0.65, 1);
+					transform: translate3d(0, 2.1rem, 0) scale3d(0.65, 0.65, 1);
+				}
+			}
+		}
+		&__field {
+			width: 100%;
+			background: transparent;
+			font-size: 1.2rem;
+			padding: 0.5rem;
+			margin-bottom: 2rem;
+			color: $input-light-font;
+			font-size: 1.2rem;
+			z-index: 100;
+			opacity: 0;
+			&:focus {
+				opacity: 1;
+				-webkit-transition: opacity 0s 0.2s;
+				transition: opacity 0s 0.2s;
+				-webkit-transition-timing-function: cubic-bezier(0, 0.25, 0.5, 1);
+				transition-timing-function: cubic-bezier(0, 0.25, 0.5, 1);
+				+.input__label {
+					&::before {
+						-webkit-transform: translate3d(0, 0, 0);
+						transform: translate3d(0, 0, 0);
+					}
+					&::after {
+						opacity: 0;
+					}
+					&__content {
+						-webkit-transform: translate3d(0, 2.1rem, 0) scale3d(0.65, 0.65, 1);
+						transform: translate3d(0, 2.1rem, 0) scale3d(0.65, 0.65, 1);
+					}
+				}
+			}
+		}
+		&__label {
+			width: 100%;
+			position: absolute;
+			text-align: left;
+			padding: 0.5rem 0;
+			pointer-events: none;
+			font-size: 1rem;
+			&::before, &::after {
+				content: '';
+				background: $input-dark-bg;
+				position: absolute;
+				width: 100%;
+				left: 0;
+				-webkit-transition-timing-function: cubic-bezier(0, 0.25, 0.5, 1);
+				transition-timing-function: cubic-bezier(0, 0.25, 0.5, 1);
+			}
+			&::before {
+				height: 100%;
+				top: 0;
+				-webkit-transform: translate3d(0, -100%, 0);
+				transform: translate3d(0, -100%, 0);
+				-webkit-transition: -webkit-transform 0.2s;
+				transition: transform 0.2s;
+			}
+			&::after {
+				height: 0.2rem;
+				top: 100%;
+				-webkit-transition: opacity 0.2s;
+				transition: opacity 0.2s;
+			}
+			&__content {
+				padding: 0;
+				-webkit-transform-origin: 0 0;
+				transform-origin: 0 0;
+				-webkit-transition: -webkit-transform 0.2s, color 0.2s;
+				transition: transform 0.2s, color 0.2s;
+				-webkit-transition-timing-function: cubic-bezier(0, 0.25, 0.5, 1);
+				transition-timing-function: cubic-bezier(0, 0.25, 0.5, 1);
+			}
+		}
+	}
+}
