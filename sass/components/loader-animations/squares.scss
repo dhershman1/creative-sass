@@ -1,32 +1,43 @@
-.squares {
-	width: 100px;
-  height: 100px;
-  position: absolute;
-	&.square-1 {
-		background-color: $square-1-bg;
-		top: 0;
-		left: 0;
-		z-index: 1;
-		animation: square-1_move 1.8s cubic-bezier(.6,.01,.4,1) infinite;
-	}
-	&.square-2 {
-		background-color: $square-2-bg;
-		top: 0;
-		right: 0;
-		animation: square-2_move 1.8s cubic-bezier(.6,.01,.4,1) infinite;
-	}
-	&.square-3 {
-		background-color: $square-3-bg;
-		bottom: 0;
-		right: 0;
-		z-index: 1;
-		animation: square-3_move 1.8s cubic-bezier(.6,.01,.4,1) infinite;
-	}
-	&.square-4 {
-		background-color: $square-4-bg;
-		bottom: 0;
-		left: 0;
-		animation: square-4_move 1.8s cubic-bezier(.6,.01,.4,1) infinite;
+.cs-loader {
+	position: relative;
+  width: $loader-width;
+  height: $loader-height;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+	margin: auto;
+	font-size: 16px;
+	&__squares {
+		width: $loader-square-w;
+		height: $loader-square-h;
+		position: absolute;
+		&--square-1 {
+			background-color: $square-1-bg;
+			top: 0;
+			left: 0;
+			z-index: 1;
+			animation: square-1_move 1.8s cubic-bezier(.6,.01,.4,1) infinite;
+		}
+		&--square-2 {
+			background-color: $square-2-bg;
+			top: 0;
+			right: 0;
+			animation: square-2_move 1.8s cubic-bezier(.6,.01,.4,1) infinite;
+		}
+		&--square-3 {
+			background-color: $square-3-bg;
+			bottom: 0;
+			right: 0;
+			z-index: 1;
+			animation: square-3_move 1.8s cubic-bezier(.6,.01,.4,1) infinite;
+		}
+		&--square-4 {
+			background-color: $square-4-bg;
+			bottom: 0;
+			left: 0;
+			animation: square-4_move 1.8s cubic-bezier(.6,.01,.4,1) infinite;
+		}
 	}
 }
 

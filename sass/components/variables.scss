@@ -1,5 +1,4 @@
-$primary: hsl(197, 61%, 47%);
-
+// Sizes
 // Font Sizes
 $font-10: 3rem;
 $font-8: 2.4rem;
@@ -13,7 +12,17 @@ $font-1: 1rem;
 $font-08: 0.8rem;
 $font-05: 0.5rem;
 
+// Loaders
+// Loader height & width
+$loader-height: 12.5rem;
+$loader-width: 12.5rem;
+// Squares height & width
+$loader-square-h: 6.25rem;
+$loader-square-w: 6.25rem;
+
+// All colors
 // Basic Colors
+$primary: hsl(197, 61%, 47%);
 $primary-accent: hsl(213, 24%, 46%);
 $secondary-accent: hsl(184, 77%, 48%);
 
@@ -81,6 +90,7 @@ $link-font-color: hsl(213, 24%, 46%);
 $link-light-font: hsl(147, 92%, 50%);
 $link-main-bg: hsl(213, 24%, 46%);
 
+// Pricing
 // Pricing Colors
 $pricing-main-bg: hsl(216, 17%, 94%);
 $pricing-font: hsl(222, 7%, 64%);
@@ -116,8 +126,12 @@ $transparent-pricing-font-color: hsl(0, 0%, 100%);
 $transparent-action-btn: hsl(117, 38%, 63%);
 $transparent-action-btn-hover: hsl(147, 92%, 50%);
 
+// Loaders
 // Squares
 $square-1-bg: hsl(354, 94%, 66%);
 $square-2-bg: hsl(260, 75%, 58%);
 $square-3-bg: hsl(208, 93%, 54%);
 $square-4-bg: hsl(41, 95%, 64%);
+
+// Circles
+$circle-stroke: rgb(76, 147, 175);

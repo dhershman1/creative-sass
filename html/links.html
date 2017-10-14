@@ -5,12 +5,18 @@
 		<p class="card-text">
 			Link animations for anchor tags, apply the animation to each anchor tag after applying the block tag to its wrapper
 		</p>
+		<p class="card-text">Variables:</p>
+		<ul>
+			<li><span class="highlight">$link-font-color</span>: Main font color for normal links</li>
+			<li><span class="highlight">$link-light-color</span>: Main font color for links with the dark bg</li>
+			<li><span class="highlight">$link-main-bg</span>: Main color for transition links</li>
+		</ul>
 		<p class="card-text">Example:</p>
 		<pre><code class="html">
 &lt;div class=&quot;cl&quot;&gt;
-&lt;a class=&quot;cl__{ANIMATION}&quot; href=&quot;#&quot;&gt;Link 1&lt;/a&gt;
-&lt;a class=&quot;cl__{ANIMATION}&quot; href=&quot;#&quot;&gt;Link 2&lt;/a&gt;
-&lt;a class=&quot;cl__{ANIMATION}&quot; href=&quot;#&quot;&gt;Link n..&lt;/a&gt;
+&lt;a class=&quot;cl--{ANIMATION}&quot; href=&quot;#&quot;&gt;Link 1&lt;/a&gt;
+&lt;a class=&quot;cl--{ANIMATION}&quot; href=&quot;#&quot;&gt;Link 2&lt;/a&gt;
+&lt;a class=&quot;cl--{ANIMATION}&quot; href=&quot;#&quot;&gt;Link n..&lt;/a&gt;
 &lt;/div&gt;
 		</pre></code>
 	</div>
@@ -21,10 +27,10 @@
 		<div class="card-block">
 			<p class="card-text">A Simple surrounding brackets on hover animation</p>
 			<div class="cl">
-				<a class="cl__brackets" href="#">Cool</a>
-				<a class="cl__brackets" href="#">Things</a>
+				<a class="cl--brackets" href="#">Cool</a>
+				<a class="cl--brackets" href="#">Things</a>
 			</div>
-			<p class="card-text">Animation class <span class="highlight">cl__brackets</span></p>
+			<p class="card-text">Animation class <span class="highlight">cl--brackets</span></p>
 		</div>
 	</div>
 	<div class="card">
@@ -32,10 +38,10 @@
 		<div class="card-block">
 			<p class="card-text">Top border that animated to an underline</p>
 			<div class="cl">
-				<a class="cl__border-slide" href="#">Cool</a>
-				<a class="cl__border-slide" href="#">Things</a>
+				<a class="cl--border-slide" href="#">Cool</a>
+				<a class="cl--border-slide" href="#">Things</a>
 			</div>
-			<p class="card-text">Animation class <span class="highlight">cl__border-slide</span></p>
+			<p class="card-text">Animation class <span class="highlight">cl--border-slide</span></p>
 		</div>
 	</div>
 	<div class="card">
@@ -43,10 +49,10 @@
 		<div class="card-block">
 			<p class="card-text">Bottom border that animates to a top and bottom border</p>
 			<div class="cl">
-				<a class="cl__lines" href="#">Cool</a>
-				<a class="cl__lines" href="#">Things</a>
+				<a class="cl--lines" href="#">Cool</a>
+				<a class="cl--lines" href="#">Things</a>
 			</div>
-			<p class="card-text">Animation class <span class="highlight">cl__lines</span></p>
+			<p class="card-text">Animation class <span class="highlight">cl--lines</span></p>
 		</div>
 	</div>
 </div>
@@ -56,10 +62,10 @@
 		<div class="card-block">
 			<p class="card-text">Switches left and right border to bottom and top</p>
 			<div class="cl">
-				<a class="cl__border-switch" href="#">Cool</a>
-				<a class="cl__border-switch" href="#">Things</a>
+				<a class="cl--border-switch" href="#">Cool</a>
+				<a class="cl--border-switch" href="#">Things</a>
 			</div>
-			<p class="card-text">Animation class <span class="highlight">cl__border-switch</span></p>
+			<p class="card-text">Animation class <span class="highlight">cl--border-switch</span></p>
 		</div>
 	</div>
 	<div class="card">
@@ -67,10 +73,10 @@
 		<div class="card-block">
 			<p class="card-text">Text Fill animation</p>
 			<div class="cl">
-				<a class="cl__text-fill" href="#" data-hover="Cool">Cool</a>
-				<a class="cl__text-fill" href="#" data-hover="Things">Things</a>
+				<a class="cl--text-fill" href="#" data-hover="Cool">Cool</a>
+				<a class="cl--text-fill" href="#" data-hover="Things">Things</a>
 			</div>
-			<p class="card-text">Animation class <span class="highlight">cl__text-fill</span></p>
+			<p class="card-text">Animation class <span class="highlight">cl--text-fill</span></p>
 			<p class="card-text">Requires <span class="highlight">data-hover</span> attribute to replicate text</p>
 		</div>
 	</div>
@@ -79,10 +85,10 @@
 		<div class="card-block">
 			<p class="card-text">Fills text color and places a top and bottom border</p>
 			<div class="cl">
-				<a class="cl__border" href="#">Cool</a>
-				<a class="cl__border" href="#">Things</a>
+				<a class="cl--border" href="#">Cool</a>
+				<a class="cl--border" href="#">Things</a>
 			</div>
-			<p class="card-text">Animation class <span class="highlight">cl__border</span></p>
+			<p class="card-text">Animation class <span class="highlight">cl--border</span></p>
 		</div>
 	</div>
 </div>

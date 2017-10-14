@@ -1,26 +1,36 @@
-.circles {
-  transform: rotate(-90deg);
-  stroke-linecap: round;
-  stroke-width: 4;
-  fill: none;
-  
-  &__internal,
-  &__external {
-    stroke: rgb(76, 147, 175);
-    stroke-dashoffset: 0;
-    transform-origin: center;
-  }
-  
-  &__internal {
-    stroke-dasharray: 187;
-    animation: internal 1s ease-in-out infinite;
-    opacity: .4;
-  }
-  
-  &__external {
-    stroke-dasharray: 312;
-    animation: external 1s linear infinite;
-    opacity: .9;
+.cs-loader {
+  position: relative;
+  width: $loader-width;
+  height: $loader-height;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  &__circles {
+    transform: rotate(-90deg);
+    stroke-linecap: round;
+    stroke-width: 4;
+    fill: none;
+    
+    &--internal,
+    &--external {
+      stroke: $circle-stroke;
+      stroke-dashoffset: 0;
+      transform-origin: center;
+    }
+    
+    &--internal {
+      stroke-dasharray: 187;
+      animation: internal 1s ease-in-out infinite;
+      opacity: .4;
+    }
+    
+    &--external {
+      stroke-dasharray: 312;
+      animation: external 1s linear infinite;
+      opacity: .9;
+    }
   }
 }
 

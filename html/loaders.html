@@ -5,13 +5,14 @@
 		<p class="card-text">
 			Create a responsive loading animation
 		</p>
+		<p class="card-text">Uses <span class="highlight">$loader-height</span> &amp; <span class="highlight">$loader-width</span> variables</p>
 		<p class="card-text">Examples:</p>
 		<pre><code class="html">
 &lt;div class=&quot;cs-loader&quot;&gt;
-  &lt;div class=&quot;squares square-1&quot;&gt;&lt;/div&gt;
-  &lt;div class=&quot;squares square-2&quot;&gt;&lt;/div&gt;
-  &lt;div class=&quot;squares square-3&quot;&gt;&lt;/div&gt;
-  &lt;div class=&quot;squares square-4&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;cs-loader__squares cs-loader__squares--square-1&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;cs-loader__squares cs-loader__squares--square-2&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;cs-loader__squares cs-loader__squares--square-3&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;cs-loader__squares cs-loader__squares--square-4&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;cs-loader&quot;&gt;
@@ -31,14 +32,20 @@
 			<p class="card-text">Square based rotating loading animation</p>
 			<div class="mb-3">
 				<div class="cs-loader">
-					<div class="squares square-1"></div>
-					<div class="squares square-2"></div>
-					<div class="squares square-3"></div>
-					<div class="squares square-4"></div>
+					<div class="cs-loader__squares cs-loader__squares--square-1"></div>
+					<div class="cs-loader__squares cs-loader__squares--square-2"></div>
+					<div class="cs-loader__squares cs-loader__squares--square-3"></div>
+					<div class="cs-loader__squares cs-loader__squares--square-4"></div>
 				</div>
 			</div>
-			<p class="card-text">Type Class: <span class="highlight">.squares</span></p>
-			<p class="card-text">Piece Class: <span class="highlight">.square-1</span></p>
+			<p class="card-text">Setup Class: <span class="highlight">.cs-loader__squares</span></p>
+			<p class="card-text">Attribute Class: <span class="highlight">.cs-loader__squares--square-[1-4]</span></p>
+			<p class="card-text">Variables:</p>
+			<ul>
+				<li><span class="highlight">$loader-squares-h</span>: Height value for each square</li>
+				<li><span class="highlight">$loader-squares-w</span>: Width value for each square</li>
+				<li><span class="highlight">$square-[1-4]-bg</span>: Background color of the corrisponding square</li>
+			</ul>
 		</div>
 	</div>
 	<div class="card">
@@ -47,15 +54,20 @@
 			<p class="card-text">Circle loader animation</p>
 			<div class="mb-3">
 				<div class="cs-loader">
-					<svg class="circles" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-						<circle class="circles__internal" cx="60" cy="60" r="30"></circle>
-						<circle class="circles__external" cx="60" cy="60" r="50"></circle>
+					<svg class="cs-loader__circles" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+						<circle class="cs-loader__circles--internal" cx="60" cy="60" r="30"></circle>
+						<circle class="cs-loader__circles--external" cx="60" cy="60" r="50"></circle>
 					</svg>
 				</div>
 			</div>
-			<p class="card-text">Wrapper Class: <span class="highlight">.circles</span></p>
-			<p class="card-text">Internal Class: <span class="highlight">.circles__internal</span></p>
-			<p class="card-text">External Class: <span class="highlight">.circles__external</span></p>
+			<p class="card-text">Div Wrapper Class: <span class="highlight">.cs-loader</span></p>
+			<p class="card-text">Wrapper Class: <span class="highlight">.cs-loader__circles</span></p>
+			<p class="card-text">Internal Class: <span class="highlight">.cs-loader__circles--internal</span></p>
+			<p class="card-text">External Class: <span class="highlight">.cs-loader__circles--external</span></p>
+			<p class="card-text">Variables:</p>
+			<ul>
+				<li><span class="highlight">$circle-stroke</span>: The color stroke the circles base off of</li>
+			</ul>
 		</div>
 	</div>
 </div>
