@@ -35,33 +35,32 @@
 			visibility: visible;
 		}
 	}
-	&__content {
-		&__title {
-			color: $modal-header;
+	&__title {
+		color: $modal-header;
+		margin: 0;
+		padding: 0.4rem;
+		text-align: center;
+		font-size: 2.4rem;
+		font-weight: 300;
+		opacity: 0.8;
+		background-color: $primary;
+		border-radius: 0.3rem 0.3rem 0 0;
+	}
+	&__block {
+		padding: 1rem 1.7rem 1.5rem;
+		margin: 0;
+		font-weight: 300;
+		font-size: 1.15rem;
+		background-color: $modal-content-bg;
+		&__text {
 			margin: 0;
-			padding: 0.4rem;
-			text-align: center;
-			font-size: 2.4rem;
-			font-weight: 300;
-			opacity: 0.8;
-			background-color: $primary;
-			border-radius: 0.3rem 0.3rem 0 0;
+			padding: 1rem 0;
 		}
-		&__block {
-			padding: 1rem 1.7rem 1.5rem;
+		&__list {
 			margin: 0;
-			font-weight: 300;
-			font-size: 1.15rem;
-			&__text {
-				margin: 0;
-				padding: 1rem 0;
-			}
-			&__list {
-				margin: 0;
-				padding: 0 0 1.5rem 1.2rem;
-				&__list-item {
-					padding: 0.5rem 0;
-				}
+			padding: 0 0 1.5rem 1.2rem;
+			&__list-item {
+				padding: 0.5rem 0;
 			}
 		}
 	}
