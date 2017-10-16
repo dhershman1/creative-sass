@@ -1,0 +1,83 @@
+.cm-modal {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	width: 50%;
+	max-width: 39.38rem;
+	min-width: 20rem;
+	height: auto;
+	z-index: 2000;
+	visibility: hidden;
+	backface-visibility: hidden;
+	transform: translateX(-50%) translateY(-50%);
+	h4 {
+		width: 50%;
+		margin: 1rem;
+	}
+}
+
+.cm-show {
+	visibility: visible;
+	~ .cm-overlay {
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+.cm-overlay {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	visibility: hidden;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	opacity: 0;
+	background: $overlay;
+	transition: all 0.3s;
+}
+
+.cm-content {
+	color: $shade-900;
+	background: #fff;
+	position: relative;
+	border-radius: 0.3rem;
+	margin: 0 auto;
+	button {
+		display: inline-block;
+		font-size: 0.8rem;
+	}
+	> {
+		h3 {
+			color: #fff;
+			margin: 0;
+			padding: 0.4rem;
+			text-align: center;
+			font-size: 2.4rem;
+			font-weight: 300;
+			opacity: 0.8;
+			background-color: $primary;
+			border-radius: 0.3rem 0.3rem 0 0;
+		}
+		div {
+			padding: 1rem 1.7rem 1.5rem;
+			margin: 0;
+			font-weight: 300;
+			font-size: 1.15rem;
+			p {
+				margin: 0;
+				padding: 1rem 0;
+			}
+			ul {
+				margin: 0;
+				padding: 0 0 1.5rem 1.2rem;
+				li {
+					padding: 0.5rem 0;
+				}
+			}
+		}
+	}
+}
+
+@import "modal-animations/fade-in";
+@import "modal-animations/slide-in";

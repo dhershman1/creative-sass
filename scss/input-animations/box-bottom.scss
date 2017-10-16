@@ -1,0 +1,89 @@
+.ci-box-bottom {
+	overflow: hidden;
+	.input__field {
+		width: 100%;
+		background: transparent;
+		padding: 0.5rem;
+		margin-bottom: 2rem;
+		color: $spring-green;
+		font-size: 1.2rem;
+		z-index: 100;
+		opacity: 0;
+	}
+	.input__label {
+		width: 100%;
+		position: absolute;
+		text-align: left;
+		padding: 0.5rem 0;
+		pointer-events: none;
+		font-size: 1rem;
+		&::before, &::after {
+			content: '';
+			position: absolute;
+			width: 100%;
+			left: 0;
+		}
+		&::before {
+			height: 100%;
+			background: #A8A8A8;
+			top: 0;
+			-webkit-transform: translate3d(0, -100%, 0);
+			transform: translate3d(0, -100%, 0);
+			-webkit-transition: -webkit-transform 0.2s;
+			transition: transform 0.2s;
+		}
+		&::after {
+			height: 2px;
+			background: #A8A8A8;
+			top: 100%;
+			-webkit-transition: opacity 0.2s;
+			transition: opacity 0.2s;
+		}
+	}
+	.input__label-content {
+		padding: 0;
+		-webkit-transform-origin: 0 0;
+		transform-origin: 0 0;
+		-webkit-transition: -webkit-transform 0.2s, color 0.2s;
+		transition: transform 0.2s, color 0.2s;
+	}
+	.input__field:focus, .input--filled .input__field {
+		opacity: 1;
+		-webkit-transition: opacity 0s 0.2s;
+		transition: opacity 0s 0.2s;
+	}
+	.input__label {
+		&::before, &::after {
+			-webkit-transition-timing-function: cubic-bezier(0, 0.25, 0.5, 1);
+			transition-timing-function: cubic-bezier(0, 0.25, 0.5, 1);
+		}
+	}
+	.input__field:focus,
+	&.input--filled .input__field {
+		opacity: 1;
+		-webkit-transition: opacity 0s 0.2s;
+		transition: opacity 0s 0.2s;
+	}
+	.input__label-content,
+	.input__field:focus,
+	&.input--filled .input__field {
+		-webkit-transition-timing-function: cubic-bezier(0, 0.25, 0.5, 1);
+		transition-timing-function: cubic-bezier(0, 0.25, 0.5, 1);
+	}
+	.input__field:focus + .input__label::before,
+	&.input--filled .input__label::before {
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+	.input__field:focus + .input__label::after,
+	&.input--filled .input__label::after {
+		opacity: 0;
+	}
+	.input__field:focus + .input__label .input__label-content,
+	&.input--filled .input__label .input__label-content {
+		color: $spring-green;
+		font-size: 1.2rem;
+		-webkit-transform: translate3d(0, 2.1rem, 0) scale3d(0.65, 0.65, 1);
+		transform: translate3d(0, 2.1rem, 0) scale3d(0.65, 0.65, 1);
+	}
+}

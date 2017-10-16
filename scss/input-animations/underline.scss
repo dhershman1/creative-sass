@@ -1,0 +1,107 @@
+.ci-underline {
+	overflow: hidden;
+	.input__field {
+		margin-top: 1rem;
+		padding: 1.5rem 0.15rem;
+		width: 100%;
+		background: transparent;
+		color: $primary-accent;
+	}
+	.input__label {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		padding: 0 0.25rem;
+		width: 100%;
+		height: calc(100% - 1rem);
+		text-align: left;
+		pointer-events: none;
+		.content {
+			position: absolute;
+		}
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: calc(100% - 10px);
+			border-bottom: 1px solid $shade-150;
+		}
+		&::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: calc(100% - 10px);
+			border-bottom: 1px solid $shade-150;
+			margin-top: 2px;
+			border-bottom: 4px solid red;
+			-webkit-transform: translate3d(-100%, 0, 0);
+			transform: translate3d(-100%, 0, 0);
+			-webkit-transition: -webkit-transform 0.3s;
+			transition: transform 0.3s;
+		}
+	}
+	.input__label-color-1::after {
+		border-color: $primary;
+	}
+	.input__label-color-2::after {
+		border-color: $spring-green;
+	}
+	.input__label-color-3::after {
+		border-color: $secondary-accent;
+	}
+	.input__field:focus + .input__label::after,
+	&.input--filled .input__label::after {
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+	.input__field:focus + .input__label .input__label-content,
+	&.input--filled .input__label .content {
+		-webkit-animation: anim-1 0.3s forwards;
+		animation: anim-1 0.3s forwards;
+	}
+}
+
+@-webkit-keyframes anim-1 {
+	50% {
+		opacity: 0;
+		-webkit-transform: translate3d(1rem, 0, 0);
+		transform: translate3d(1rem, 0, 0);
+	}
+
+	51% {
+		opacity: 0;
+		-webkit-transform: translate3d(-1rem, -40%, 0);
+		transform: translate3d(-1rem, -40%, 0);
+	}
+
+	100% {
+		opacity: 1;
+		-webkit-transform: translate3d(0, -40%, 0);
+		transform: translate3d(0, -40%, 0);
+	}
+}
+
+
+@keyframes anim-1 {
+	50% {
+		opacity: 0;
+		-webkit-transform: translate3d(1rem, 0, 0);
+		transform: translate3d(1rem, 0, 0);
+	}
+
+	51% {
+		opacity: 0;
+		-webkit-transform: translate3d(-1rem, -40%, 0);
+		transform: translate3d(-1rem, -40%, 0);
+	}
+
+	100% {
+		opacity: 1;
+		-webkit-transform: translate3d(0, -40%, 0);
+		transform: translate3d(0, -40%, 0);
+	}
+}
